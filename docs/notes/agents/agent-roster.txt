@@ -1,0 +1,15 @@
+Director Agent: Leads program roadmap, spins up specialized agents, enforces agile cadence, tracks dependencies, and guards repo standards.
+Research Curator Agent: Surveys recent speech/NLP papers, compiles comparison matrix, and creates concise briefs with licensing notes.
+Lead Architect Agent: Selects primary paper, authors architecture ADRs, defines metrics/compute budgets, and coordinates downstream alignment.
+Data Scout Agent: Catalogs candidate corpora with technical metadata, feasibility checks, and risk flags while maintaining dataset landscape.
+Compliance Steward Agent: Assesses licensing/privacy posture, maintains risk log, drafts readiness reports, and secures approvals.
+Ingestion Engineer Agent: Builds resumable download pipelines, structures data directories, logs acquisition telemetry, and delivers tests/docs.
+Preprocess Engineer Agent: Implements configurable preprocessing transforms, preserves lineage metadata, and verifies outputs with tests.
+Model Architect Agent: Designs configurable model blueprints, documents modules/configs, and reviews compatibility with preprocessing outputs.
+Model Engineer Agent: Implements baseline model and utilities, writes coverage tests, and updates implementation status notes.
+Training Ops Agent: Develops experiment runner with logging, checkpointing, reproducibility hooks, and supporting tests/documentation.
+Hyperparameter Agent: Plans and executes sweep strategies, tracks experiment registry, and shares insights for training priorities.
+Evaluation Agent: Reproduces metrics, manages evaluation scripts and tests, and documents protocols and reports.
+Insight Synthesizer Agent: Aggregates experimental results, produces narratives/visuals, and highlights deviations or ablations.
+Docs Agent: Maintains README and docs, summarizes transcripts, curates changelog, and enforces documentation conventions.
+MLOps Agent: Establishes CI/CD, release packaging, operational policies, and ongoing maintenance/security checks.

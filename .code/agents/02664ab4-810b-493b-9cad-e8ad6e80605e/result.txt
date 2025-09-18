@@ -1,0 +1,337 @@
+[2025-09-18T06:32:14] Code v0.2.152
+--------
+workdir: /Users/dodofk/Job/sinopac/Codex_Exp
+model: gpt-5-codex
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: auto
+--------
+[2025-09-18T06:32:14] User instructions:
+Context: Working directory: /Users/dodofk/Job/sinopac/Codex_Exp. Key references: docs/notes/agent-briefs.md, program-roadmap.md, sprint-backlog.md, dataset-landscape.md, compliance-risk-log.md. Target paper: “Transforming LLMs into Cross-modal and Cross-lingual Retrieval Systems.” Planning should respect documentation workflow (notes in docs/notes/, transcripts in .code/agents/).
+
+Agent: Expand Phase 2 planning for reproducing “Transforming LLMs into Cross-modal and Cross-lingual Retrieval Systems.” Build on the existing roadmap, sprint backlog, dataset landscape, and compliance log. Recommend concrete next steps for Research Curator, Data Scout, Compliance Steward, Director, and Lead Architect so they can execute immediately. Identify additional datasets or resources beyond FLEURS that align with the paper’s experiments. Maintain repository conventions (Make targets, docs/notes structure) and highlight checkpoints, deliverables, and required artifacts.
+
+[Running in read-only mode - no modifications allowed]
+
+[2025-09-18T06:32:25] thinking
+
+**Preparing to explore documentation**
+[2025-09-18T06:32:25] exec bash -lc ls in /Users/dodofk/Job/sinopac/Codex_Exp/.
+[2025-09-18T06:32:25] bash -lc ls succeeded in 12ms:
+AGENTS.md
+docs
+[2025-09-18T06:32:25] tokens used: 8647
+
+[2025-09-18T06:32:31] thinking
+
+**Listing documentation files**
+[2025-09-18T06:32:31] exec bash -lc ls in /Users/dodofk/Job/sinopac/Codex_Exp/./docs
+[2025-09-18T06:32:31] bash -lc ls succeeded in 17ms:
+adr
+notes
+research
+[2025-09-18T06:32:31] tokens used: 184
+
+[2025-09-18T06:32:33] thinking
+
+**Listing docs and notes**
+[2025-09-18T06:32:34] exec bash -lc ls in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:32:34] bash -lc ls succeeded in 17ms:
+agent-briefs.md
+agent-roster.txt
+auto-paper-plan.md
+compliance-risk-log.md
+dataset-landscape.md
+program-roadmap.md
+sprint-backlog.md
+[2025-09-18T06:32:34] tokens used: 138
+
+[2025-09-18T06:32:37] thinking
+
+**Reviewing roadmap and key files**
+[2025-09-18T06:32:38] exec bash -lc 'cat program-roadmap.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:32:38] bash -lc 'cat program-roadmap.md' succeeded in 24ms:
+# Program Roadmap
+
+## Overview
+- **Vision**: Reproduce “Transforming LLMs into Cross-modal and Cross-lingual Retrieval Systems” end-to-end, then extend it with Auto-Paper-driven ablations while maintaining auditable data governance.
+- **Current Phase**: Phase 2 – Data Discovery & Governance (kickoff 2025-09-18).
+- **Time Horizon**: 2025-09-18 → 2026-01-31.
+
+## Milestones
+| Milestone | Target Date | Owner | Dependencies | Success Criteria |
+|-----------|-------------|-------|--------------|-----------------|
+| Phase 2 kickoff alignment | 2025-09-19 | Director | ADR-001 primary paper approved | Rubric + working agreements captured in sprint backlog |
+| Backup paper refresh complete | 2025-09-23 | Research Curator | Phase 1 matrix archived | Alternative papers summarized with dataset viability notes |
+| Dataset shortlist checkpoint (#1) | 2025-09-24 | Data Scout & Compliance Steward | Kickoff notes circulated | Top 4 corpora profiled with risk summaries |
+| Compliance assessment checkpoint (#2) | 2025-09-27 | Compliance Steward | Shortlist dataset matrix complete | License/privacy annotations drafted, blockers identified |
+| Manifest & sign-off checkpoint (#3) | 2025-10-01 | Director | Compliance report ready | Dataset manifest + readiness report approved |
+| Phase 3 readiness review | 2025-10-04 | Director | Phase 2 exit criteria met | Ingestion & preprocess backlog prioritized |
+
+## Phase Progress
+| Phase | Status | Entry Criteria | Exit Criteria | Notes |
+|-------|--------|----------------|---------------|-------|
+[2025-09-18T06:32:38] tokens used: 256
+
+[2025-09-18T06:32:40] thinking
+
+**Reading dataset-landscape**
+[2025-09-18T06:32:41] exec bash -lc 'cat dataset-landscape.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:32:41] bash -lc 'cat dataset-landscape.md' succeeded in 21ms:
+# Dataset Landscape
+
+| Dataset | Phase | Modality | Languages | Size (hrs/utt) | Splits Available | License | Checksums Published | Download Source | Notes / Known Pitfalls | Risk Flags |
+|---------|-------|----------|-----------|----------------|------------------|---------|---------------------|-----------------|------------------------|-----------|
+| FLEURS / XTREME-S | 2 | Speech ↔ Text | 102 (21 train focus) | ≈12 hrs/lang | train/dev/test | CC-BY 4.0 | Yes (per language tarballs) | Hugging Face `google/fleurs`, TFDS `xtreme_s` | Read speech; mismatch vs. noisy domains; large disk footprint (~350 GB) | License attribution required; review regional consent terms |
+
+## Research Log
+- 2025-09-18: Data Scout Alpha drafted initial column schema and source list.
+- 2025-09-18: Data Scout Alpha logged FLEURS baseline entry and verified CC-BY license.
+[2025-09-18T06:32:41] tokens used: 10144
+
+[2025-09-18T06:32:43] thinking
+
+**Identifying compliance risk log**
+[2025-09-18T06:32:44] exec bash -lc 'cat compliance-risk-log.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:32:44] bash -lc 'cat compliance-risk-log.md' succeeded in 21ms:
+# Compliance Risk Log
+
+| Dataset | License Summary | Privacy Considerations | Mitigation Actions | Approvals Required | Owner | Status | Notes |
+|---------|-----------------|------------------------|--------------------|-------------------|-------|--------|-------|
+| FLEURS / XTREME-S | CC-BY 4.0; requires attribution to Google | Metadata includes anonymized speaker IDs; multilingual voice data | Enforce attribution in docs; hash any speaker IDs before storage; monitor regional consent clauses | None beyond standard OSS review; confirm with legal if commercial reuse expands | Compliance Steward | Open | License text: https://huggingface.co/datasets/google/fleurs |
+
+## Outstanding Questions
+- 2025-09-18: Confirm whether LDC datasets demand secure enclave storage.
+- 2025-09-18: Validate whether FLEURS CC-BY permits model redistribution in downstream demos.
+[2025-09-18T06:32:44] tokens used: 1485
+
+[2025-09-18T06:32:47] thinking
+
+**Preparing sprint backlog**
+[2025-09-18T06:32:48] exec bash -lc 'cat sprint-backlog.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:32:48] bash -lc 'cat sprint-backlog.md' succeeded in 30ms:
+# Sprint Backlog
+
+## Sprint Summary
+- **Sprint ID**: 2025-W38
+- **Dates**: 2025-09-18 → 2025-09-29
+- **Sprint Goal**: Maintain Phase 1 research resilience while launching Phase 2 dataset discovery toward shortlist + compliance readiness.
+- **Velocity Target**: 26 points (Director, Data Scout, Compliance Steward, Research Curator, Lead Architect).
+
+## Committed Work
+| Item | Phase | Owner | Story Points | Status | Definition of Done |
+|------|-------|-------|--------------|--------|--------------------|
+| Catalogue top candidate corpora | Phase 2 | Data Scout Alpha | 5 | In Progress | At least 8 corpora logged with modality, size, risk flags in `dataset-landscape.md` |
+| Draft license & privacy cheat sheet | Phase 2 | Compliance Steward | 3 | Not Started | Cheat sheet published; referenced in risk log |
+| Build dataset landscape matrix skeleton | Phase 2 | Data Scout Alpha | 2 | Complete | Markdown table structure committed with placeholder columns |
+| Schedule kickoff + capture notes | Phase 2 | Director | 2 | Complete | Kickoff agenda + notes appended to `.code/agents/director/` transcript |
+| Create compliance risk log template | Phase 2 | Compliance Steward | 3 | In Progress | `compliance-risk-log.md` created with initial entries |
+| Define Phase 2 checkpoints & invitations | Phase 2 | Director | 2 | In Progress | Calendar invites sent; backlog updated with checkpoint tasks |
+| Outline dataset manifest draft | Phase 2 | Data Scout Alpha | 3 | Not Started | Manifest doc stub created with required fields |
+| Refresh backup research papers | Phase 1 | Research Curator | 4 | Not Started | 2 alternative papers appended to `paper_matrix.csv` with viability notes |
+| Align backup paper implications | Phase 1 ↔ Phase 2 | Lead Architect | 2 | Not Started | ADR addendum drafted covering fallback dataset paths |
+[2025-09-18T06:32:48] tokens used: 598
+
+[2025-09-18T06:32:50] thinking
+
+**Considering agent briefs**
+[2025-09-18T06:32:51] exec bash -lc 'cat agent-briefs.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:32:51] bash -lc 'cat agent-briefs.md' succeeded in 35ms:
+# Agent Briefs
+
+## Program Leadership
+
+### Director Agent
+- **Mission**: Orchestrate the multi-phase Auto-Paper program, turning strategic goals into actionable backlogs and aligning specialist agents across phases.
+- **Core Responsibilities**:
+  - Maintain a rolling roadmap anchored to `docs/notes/auto-paper-plan.md`, adjusting scope as ADRs evolve and ensuring phase exit criteria stay visible.
+  - Break down epics into executable sub-tasks, commission task-specific agents (e.g., multiple Data Scout instances focused on regions or modalities) via `agent_run`, and assign owners, due dates, and success metrics.
+  - Facilitate an agile cadence (backlog refinement, sprint planning, async daily updates) with status tracked in `docs/notes/sprint-backlog.md` and sprint reviews summarized for stakeholders.
+  - Monitor cross-phase dependencies, escalate risks early, and enforce repository guardrails (Make targets, documentation structure, transcript archival) before granting phase hand-offs.
+- **Deliverables**:
+  - `docs/notes/program-roadmap.md` capturing milestones, sprint goals, and dependency mapping.
+  - Continuously updated `docs/notes/sprint-backlog.md` (or equivalent kanban snapshot) listing committed work, WIP, and blockers.
+  - Coordination logs and spawned-agent references stored in `.code/agents/director/`, linking agent IDs, delegated tasks, and decision outcomes.
+- **Authority & Collaboration**:
+  - Authorized to activate any agent in this brief and instantiate temporary clones (e.g., `data_scout_multi`, `compliance_regional`) to sharpen focus where needed.
+  - Partners with initiative sponsors to approve scope changes, communicates sprint demos, and ensures each phase achieves documented exit criteria before progression.
+
+## Phase 1 – Problem & Paper Scoping
+[2025-09-18T06:32:51] tokens used: 1303
+
+[2025-09-18T06:32:55] thinking
+
+**Considering auto-paper-plan relevance**
+[2025-09-18T06:32:57] exec bash -lc 'cat auto-paper-plan.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:32:57] bash -lc 'cat auto-paper-plan.md' succeeded in 27ms:
+# Auto-Paper Implementation Plan
+
+## Phase 1 – Problem & Paper Scoping
+- Research Curator agent shortlists 3–5 recent speech/NLP papers, extracting datasets, architectures, metrics, and code links into a comparison matrix.
+- Lead Architect agent defines success criteria, target metrics, and compute budgets; publishes an ADR selecting the primary paper and secondary references.
+
+## Phase 2 – Data Discovery & Governance
+- Data Scout agent catalogs candidate corpora, covering licenses, download sources, preprocessing hints, and known pitfalls.
+- Compliance agent reviews legal/privacy constraints and signs off on an approved dataset manifest with checksums and storage paths.
+
+## Phase 3 – Data Ingestion & Preprocessing
+- Ingestion Engineer agent builds resumable download scripts, establishes `data/raw`, `data/interim`, and `data/processed` structure, and validates checksums.
+- Preprocess Engineer agent implements normalization, tokenization, or acoustic feature extraction per paper specs, with unit tests and lineage logging.
+
+## Phase 4 – Model Implementation
+- Model Architect agent drafts a configurable model skeleton that reconciles differences between selected papers and documents optional variants.
+- Model Engineer agent implements the baseline network, losses, schedulers, and shared utilities, delivering smoke tests and configuration schemas.
+
+## Phase 5 – Training Orchestration
+- Training Ops agent develops an experiment runner with checkpointing, logging, deterministic seeds, and mixed-precision toggles.
+[2025-09-18T06:32:57] tokens used: 5766
+
+[2025-09-18T06:33:14] thinking
+
+**Preparing Phase 2 planning details**
+[2025-09-18T06:33:15] exec bash -lc 'nl -ba program-roadmap.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:33:15] bash -lc 'nl -ba program-roadmap.md' succeeded in 40ms:
+     1	# Program Roadmap
+     2	
+     3	## Overview
+     4	- **Vision**: Reproduce “Transforming LLMs into Cross-modal and Cross-lingual Retrieval Systems” end-to-end, then extend it with Auto-Paper-driven ablations while maintaining auditable data governance.
+     5	- **Current Phase**: Phase 2 – Data Discovery & Governance (kickoff 2025-09-18).
+     6	- **Time Horizon**: 2025-09-18 → 2026-01-31.
+     7	
+     8	## Milestones
+     9	| Milestone | Target Date | Owner | Dependencies | Success Criteria |
+    10	|-----------|-------------|-------|--------------|-----------------|
+    11	| Phase 2 kickoff alignment | 2025-09-19 | Director | ADR-001 primary paper approved | Rubric + working agreements captured in sprint backlog |
+    12	| Backup paper refresh complete | 2025-09-23 | Research Curator | Phase 1 matrix archived | Alternative papers summarized with dataset viability notes |
+    13	| Dataset shortlist checkpoint (#1) | 2025-09-24 | Data Scout & Compliance Steward | Kickoff notes circulated | Top 4 corpora profiled with risk summaries |
+    14	| Compliance assessment checkpoint (#2) | 2025-09-27 | Compliance Steward | Shortlist dataset matrix complete | License/privacy annotations drafted, blockers identified |
+    15	| Manifest & sign-off checkpoint (#3) | 2025-10-01 | Director | Compliance report ready | Dataset manifest + readiness report approved |
+    16	| Phase 3 readiness review | 2025-10-04 | Director | Phase 2 exit criteria met | Ingestion & preprocess backlog prioritized |
+    17	
+    18	## Phase Progress
+    19	| Phase | Status | Entry Criteria | Exit Criteria | Notes |
+    20	|-------|--------|----------------|---------------|-------|
+[2025-09-18T06:33:15] tokens used: 6143
+
+[2025-09-18T06:33:17] thinking
+
+**Adding line number references**
+[2025-09-18T06:33:18] exec bash -lc 'nl -ba dataset-landscape.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:33:18] bash -lc 'nl -ba dataset-landscape.md' succeeded in 32ms:
+     1	# Dataset Landscape
+     2	
+     3	| Dataset | Phase | Modality | Languages | Size (hrs/utt) | Splits Available | License | Checksums Published | Download Source | Notes / Known Pitfalls | Risk Flags |
+     4	|---------|-------|----------|-----------|----------------|------------------|---------|---------------------|-----------------|------------------------|-----------|
+     5	| FLEURS / XTREME-S | 2 | Speech ↔ Text | 102 (21 train focus) | ≈12 hrs/lang | train/dev/test | CC-BY 4.0 | Yes (per language tarballs) | Hugging Face `google/fleurs`, TFDS `xtreme_s` | Read speech; mismatch vs. noisy domains; large disk footprint (~350 GB) | License attribution required; review regional consent terms |
+     6	
+     7	## Research Log
+     8	- 2025-09-18: Data Scout Alpha drafted initial column schema and source list.
+     9	- 2025-09-18: Data Scout Alpha logged FLEURS baseline entry and verified CC-BY license.
+[2025-09-18T06:33:18] tokens used: 2788
+
+[2025-09-18T06:33:20] thinking
+
+**Noticing compliance log lines**
+[2025-09-18T06:33:21] exec bash -lc 'nl -ba compliance-risk-log.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:33:21] bash -lc 'nl -ba compliance-risk-log.md' succeeded in 27ms:
+     1	# Compliance Risk Log
+     2	
+     3	| Dataset | License Summary | Privacy Considerations | Mitigation Actions | Approvals Required | Owner | Status | Notes |
+     4	|---------|-----------------|------------------------|--------------------|-------------------|-------|--------|-------|
+     5	| FLEURS / XTREME-S | CC-BY 4.0; requires attribution to Google | Metadata includes anonymized speaker IDs; multilingual voice data | Enforce attribution in docs; hash any speaker IDs before storage; monitor regional consent clauses | None beyond standard OSS review; confirm with legal if commercial reuse expands | Compliance Steward | Open | License text: https://huggingface.co/datasets/google/fleurs |
+     6	
+     7	## Outstanding Questions
+     8	- 2025-09-18: Confirm whether LDC datasets demand secure enclave storage.
+     9	- 2025-09-18: Validate whether FLEURS CC-BY permits model redistribution in downstream demos.
+[2025-09-18T06:33:21] tokens used: 437
+
+[2025-09-18T06:33:24] thinking
+
+**Locating sprint backlog lines**
+[2025-09-18T06:33:25] exec bash -lc 'nl -ba sprint-backlog.md' in /Users/dodofk/Job/sinopac/Codex_Exp/./docs/notes
+[2025-09-18T06:33:25] bash -lc 'nl -ba sprint-backlog.md' succeeded in 32ms:
+     1	# Sprint Backlog
+     2	
+     3	## Sprint Summary
+     4	- **Sprint ID**: 2025-W38
+     5	- **Dates**: 2025-09-18 → 2025-09-29
+     6	- **Sprint Goal**: Maintain Phase 1 research resilience while launching Phase 2 dataset discovery toward shortlist + compliance readiness.
+     7	- **Velocity Target**: 26 points (Director, Data Scout, Compliance Steward, Research Curator, Lead Architect).
+     8	
+     9	## Committed Work
+    10	| Item | Phase | Owner | Story Points | Status | Definition of Done |
+    11	|------|-------|-------|--------------|--------|--------------------|
+    12	| Catalogue top candidate corpora | Phase 2 | Data Scout Alpha | 5 | In Progress | At least 8 corpora logged with modality, size, risk flags in `dataset-landscape.md` |
+    13	| Draft license & privacy cheat sheet | Phase 2 | Compliance Steward | 3 | Not Started | Cheat sheet published; referenced in risk log |
+    14	| Build dataset landscape matrix skeleton | Phase 2 | Data Scout Alpha | 2 | Complete | Markdown table structure committed with placeholder columns |
+    15	| Schedule kickoff + capture notes | Phase 2 | Director | 2 | Complete | Kickoff agenda + notes appended to `.code/agents/director/` transcript |
+    16	| Create compliance risk log template | Phase 2 | Compliance Steward | 3 | In Progress | `compliance-risk-log.md` created with initial entries |
+    17	| Define Phase 2 checkpoints & invitations | Phase 2 | Director | 2 | In Progress | Calendar invites sent; backlog updated with checkpoint tasks |
+    18	| Outline dataset manifest draft | Phase 2 | Data Scout Alpha | 3 | Not Started | Manifest doc stub created with required fields |
+    19	| Refresh backup research papers | Phase 1 | Research Curator | 4 | Not Started | 2 alternative papers appended to `paper_matrix.csv` with viability notes |
+    20	| Align backup paper implications | Phase 1 ↔ Phase 2 | Lead Architect | 2 | Not Started | ADR addendum drafted covering fallback dataset paths |
+[2025-09-18T06:33:25] tokens used: 356
+
+[2025-09-18T06:33:56] thinking
+
+**Outlining detailed Phase 2 plan with deliverables and agent tasks**
+
+I'll organize a structured Phase 2 plan summarizing key checkpoints, dataset candidates with licenses, and clear action items for each agent, referencing documentation lines and emphasizing interplay among roles and compliance. This plan will highlight deliverables like dataset manifests and risk logs, and include instructions for documenting and linting to help agents execute smoothly.
+[2025-09-18T06:33:59] codex
+
+**Phase 2 Plan**
+
+- Phase 2 milestones already define three checkpoints and the exit review; keep these dates while sharpening deliverables for each owner (`docs/notes/program-roadmap.md:11`–`16`).
+- Backlog entries call for eight corpora in the landscape and a compliance cheat sheet, so additions should preserve that velocity target (`docs/notes/sprint-backlog.md:12`–`20`).
+- Current landscape and risk log only list FLEURS, highlighting the need for broader coverage (`docs/notes/dataset-landscape.md:3`–`8`, `docs/notes/compliance-risk-log.md:3`–`9`).
+
+**Dataset Expansion**
+
+| Dataset / Resource | Modalities | Rationale vs. paper | License & Compliance Focus | Immediate Artifacts |
+| --- | --- | --- | --- | --- |
+| CoVoST 2 | Speech↔Text translation | Multilingual parallel audio-text pairs for retrieval alignment | CC0 (from Mozilla Common Voice); verify speaker consent scope | Add matrix row + risk log entry; link to HF `facebook/covost2` |
+| MuST-C v2 | Speech↔Text | TED talks across 14 languages; strong baseline cited by cross-lingual works | CC BY-NC-ND 4.0 (non-commercial); flag derivative restrictions | Capture license notes, confirm research-only usage; note LREC source |
+| VoxPopuli | Speech↔Text, Speaker meta | Parliament debates, rich multilingual coverage, useful for zero-shot eval | CC BY-SA 4.0; monitor share-alike obligations | Record checksum plans, storage size; add compliance mitigation |
+| Multilingual LibriSpeech | Speech↔Text | Complements FLEURS with read speech; high-quality transcripts | Derived from LibriVox (public domain); confirm redistribution policy | Document language gaps; annotate metadata hashing requirements |
+| How2 / How2QA | Video+Speech↔Text | Supports cross-modal retrieval (audio/visual ↔ text) used in similar studies | CC BY 4.0; contains YouTube-derived content—note takedown risk | Add to dataset table with video storage estimates; compliance to review ToS |
+| XLS-R / XLSR-Finetuning Scripts | Model checkpoints & configs | Official paper resources for speech-text alignment | Apache 2.0 for configs, but confirm weight usage rights | Log under resources subsection; Lead Architect to trace compatibility |
+| Hugging Face “AudioCaps” + “Clotho” | Audio↔Caption | Cross-modal supervision for retrieval objectives | AudioCaps under CC BY 4.0; Clotho under CC BY 4.0; check minors in recordings | Data Scout to tag as optional enrichment; Compliance to verify consent statements |
+
+Add each dataset to `docs/notes/dataset-landscape.md` with modality, size, checksum status, and risk flags, then mirror entries in the compliance log with license summaries and outstanding approvals. Persist deeper research notes under `.code/agents/data_scout/` and `.code/agents/compliance_steward/` per project guardrails.
+
+**Agent Action Items**
+
+- **Director**
+  - Publish the rubric and checkpoint agenda into `.code/agents/director/` before 2025-09-21, aligning owners with milestones already listed (`docs/notes/program-roadmap.md:11`–`16`).
+  - Update sprint backlog WIP statuses once new datasets are logged, keeping async stand-up cadence enforced (`docs/notes/sprint-backlog.md:23`–`29`).
+  - Schedule Shortlist (#1) and Compliance (#2) reviews with explicit exit criteria (matrix completeness, license annotations) and remind teams to run `make lint` on docs prior to commits.
+
+- **Research Curator**
+  - Complete the “backup paper refresh” milestone by extracting datasets cited in shortlisted papers and documenting replication implications in `paper_matrix.csv`, referencing risks at `docs/notes/program-roadmap.md:12` and backlog item at `docs/notes/sprint-backlog.md:19`.
+  - Draft 200–300 word briefs for papers introducing CoVoST 2, MuST-C, and VoxPopuli usage; archive working notes in `.code/agents/research_curator/`.
+
+- **Data Scout**
+  - Expand the dataset landscape to hit the eight-corpora DoD (`docs/notes/sprint-backlog.md:12`), including modality-specific notes, estimated storage, checksum availability, and mirrors.
+  - Spin up targeted research transcripts (e.g., `ds_covost2.md`, `ds_mustc.md`) in `.code/agents/data_scout/` covering sourcing hurdles and compatibility with the paper’s retrieval tasks.
+  - Begin outlining the dataset manifest stub noted in the backlog (`docs/notes/sprint-backlog.md:18`) by drafting required fields (checksum source, license, storage path) for Director review at checkpoint #3.
+
+- **Compliance Steward**
+  - Produce the license/privacy cheat sheet promised in the backlog (`docs/notes/sprint-backlog.md:13`) summarizing CC0/CC-BY/CC-BY-SA/CC-BY-NC-ND differences and LDC requirements; store in `docs/notes/compliance-cheat-sheet.md`.
+  - For each new dataset, append risk log entries with approvals needed, privacy flags, and mitigation steps, ensuring linkage to outstanding questions (`docs/notes/compliance-risk-log.md:7`–`9`).
+  - Coordinate with legal on LDC or MuST-C restrictions ahead of checkpoint #2, logging outreach transcripts in `.code/agents/compliance_steward/`.
+
+- **Lead Architect**
+  - Extend ADR addendum work item (`docs/notes/sprint-backlog.md:20`) to map how each candidate dataset influences retrieval pipelines (audio-only vs. audio-visual) and model configuration requirements.
+  - Document dependency implications (storage, feature extraction) and note required preprocessing modules so Phase 3 engineers can plan Make targets; archive synthesis in `.code/agents/lead_architect/`.
+  - Cross-validate that proposed datasets support the evaluation metrics defined in Phase 1 and flag any that would require additional modalities or compute in `docs/adr/ADR-001-primary-paper.md`.
+
+**Checkpoints & Deliverables**
+
+- **Checkpoint #1 (2025-09-24)**: Landscape table updated with ≥4 fully profiled corpora, shortlist rationale logged, and corresponding transcripts archived (`docs/notes/program-roadmap.md:13`).
+- **Checkpoint #2 (2025-09-27)**: Cheat sheet + risk log cover all shortlisted datasets with mitigation plans and pending approvals clearly marked (`docs/notes/program-roadmap.md:14`).
+- **Checkpoint #3 (2025-10-01)**: Dataset manifest draft and compliance readiness report delivered, cleared through Director for Phase 3 hand-off (`docs/notes/program-roadmap.md:15`).
+
+Happy to help draft any of the narrative updates or manifest templates when write access opens.
+[2025-09-18T06:34:17] tokens used: 6437

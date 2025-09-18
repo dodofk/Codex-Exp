@@ -1,0 +1,2 @@
+{"timestamp": "2025-09-18T11:51:41.208943Z", "dataset": "fleurs", "event": "ingestion_start", "version": "docs"}
+{"timestamp": "2025-09-18T11:51:41.548543Z", "dataset": "fleurs", "event": "ingestion_complete", "version": "docs"}

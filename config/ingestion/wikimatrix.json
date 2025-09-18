@@ -1,0 +1,13 @@
+{
+  "name": "wikimatrix",
+  "version": "docs",
+  "source_url": "https://github.com/facebookresearch/LASER/tree/main/tasks/WikiMatrix",
+  "output_dir": "data/raw",
+  "artifacts": [
+    {
+      "filename": "README.md",
+      "url": "https://raw.githubusercontent.com/facebookresearch/LASER/master/tasks/WikiMatrix/README.md",
+      "sha256": "ca1a35a229e3dff3ea00dcb8fb6ad563c49c67a7c400ff878deb8b26d9574aba"
+    }
+  ]
+}

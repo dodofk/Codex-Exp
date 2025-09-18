@@ -1,0 +1,13 @@
+{
+  "name": "covost2",
+  "version": "docs",
+  "source_url": "https://huggingface.co/datasets/facebook/covost2",
+  "output_dir": "data/raw",
+  "artifacts": [
+    {
+      "filename": "README.md",
+      "url": "https://raw.githubusercontent.com/mozilla/common-voice/main/README.md",
+      "sha256": "8a64679b9ba392f0517ddb0c708f71f6cc9f4d792ef34bcea10c2b856313c001"
+    }
+  ]
+}

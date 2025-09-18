@@ -1,0 +1,8 @@
+{
+  "name": "fleurs",
+  "version": "v1",
+  "source_url": "https://huggingface.co/datasets/google/fleurs",
+  "checksum_manifest": "https://huggingface.co/datasets/google/fleurs#data-fields",
+  "output_dir": "data/raw",
+  "artifacts": []
+}

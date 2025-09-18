@@ -1,0 +1,2 @@
+{"timestamp": "2025-09-18T11:51:41.209506Z", "dataset": "fleurs", "event": "artifact_download_start", "filename": "README.md", "url": "https://huggingface.co/datasets/google/fleurs/raw/main/README.md", "attempt": 1}
+{"timestamp": "2025-09-18T11:51:41.548264Z", "dataset": "fleurs", "event": "artifact_download_complete", "filename": "README.md", "path": "data/raw/fleurs/docs/README.md"}

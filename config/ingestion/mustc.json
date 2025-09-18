@@ -1,0 +1,16 @@
+{
+  "name": "mustc",
+  "version": "docs",
+  "source_url": "https://ict.fbk.eu/must-c/",
+  "output_dir": "data/raw",
+  "artifacts": [
+    {
+      "filename": "README.md",
+      "url": "https://raw.githubusercontent.com/facebookresearch/voxpopuli/main/README.md",
+      "sha256": "4133d4ac56b283e295b1704e762a85df88700072fca4d675b914a0f396c855e8",
+      "headers": {
+        "Authorization": "Bearer ${MUSTC_TOKEN}"
+      }
+    }
+  ]
+}

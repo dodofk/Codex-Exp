@@ -1,0 +1,11 @@
+{
+  "dataset": "fleurs",
+  "input_dir": "data/raw/fleurs/v1",
+  "output_dir": "data/processed/fleurs/v1",
+  "sample_rate": 16000,
+  "steps": [
+    {"name": "resample", "params": {"rates": [16000]}},
+    {"name": "normalize_volume", "params": {"target_dbfs": -20}},
+    {"name": "extract_features", "params": {"type": "log_mel", "frame_length": 25}}
+  ]
+}
