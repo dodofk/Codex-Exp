@@ -10,6 +10,11 @@ Rely on Make targets for repeatable workflows:
 - `make test` executes the full automated suite; run it before every commit or pull request.
 Document any additional scripts inside `docs/notes/planning/` so the Director agent can schedule them in the roadmap.
 
+### Dependency Management
+- Use **uv** for all Python package operations (`uv pip install ...`, `uv pip sync ...`).
+- Do **not** call `pip`/`python -m pip` directly—this repo standardizes on uv for reproducible environments.
+- If a workflow requires new dependencies, add them to `pyproject.toml`, run `uv lock`, and note the change in the sprint backlog.
+
 ## Coding Style & Naming Conventions
 `.editorconfig` enforces UTF-8, LF endings, 2-space indentation for docs, and 4-space indentation for code. Use snake_case for modules, kebab-case for configuration (`deployment-preview.yaml`), and PascalCase for class names. Run stack-appropriate formatters (`ruff --check`, `prettier --check`, `gofmt`) prior to commits; capture intentional deviations in an ADR within `docs/adr/`.
 
