@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+.env/
+
+# uv build artefacts
+.uv/
+uv.lock.backup
+
+# Cache & test artefacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data products
+/data/
+/data_raw/
+/data_processed/
+data/raw/
+data/processed/
+
+# Agent transcripts & logs (raw)
+.code/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Secrets / env files
+*.env
+.env.*
+
+# Misc
+*.log
+/tmp/

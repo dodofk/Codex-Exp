@@ -1,0 +1,18 @@
+[project]
+name = "auto-paper-phase3"
+version = "0.1.0"
+description = "Phase 3 ingestion and preprocessing tooling for Auto-Paper experiment"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets>=2.19.0",
+    "numpy>=2.0.0",
+    "pytest>=8.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "librosa>=0.10",
+    "soundfile>=0.12",
+    "audioread",
+]
