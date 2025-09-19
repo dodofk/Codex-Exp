@@ -42,6 +42,9 @@ class DatasetConfig:
     output_dir: Path = Path("data/raw")
     artifacts: Iterable[ArtifactSpec] = ()
     extra: Dict[str, Any] | None = None
+    license: Optional[str] = None
+    distribution: Optional[str] = None
+    notes: Optional[str] = None
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "DatasetConfig":
@@ -55,6 +58,9 @@ class DatasetConfig:
             output_dir=Path(data.get("output_dir", "data/raw")),
             artifacts=artifacts,
             extra=data.get("extra"),
+            license=data.get("license"),
+            distribution=data.get("distribution"),
+            notes=data.get("notes"),
         )
 
     def with_artifacts(self, names: Iterable[str]) -> "DatasetConfig":

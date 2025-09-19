@@ -2,10 +2,12 @@
 
 - **Goal**: ingest only the English→French split for prototyping due to limited storage.
 - **Approach**:
-  1. Create a config (e.g., `config/ingestion/covost2-en-fr.json`) listing only the
-     desired tarballs.
-  2. Use the Make target with `ARGS="--artifact <filename>"` to fetch a single
-     archive or checksum file at a time.
+  1. Use the Hugging Face loader to materialize the split slice:
+     ```bash
+     make hf-download HF_ARGS="--dataset facebook/covost2 --config en_fr --split train[:1%] --output data/raw/covost2/en_fr_subset"
+     ```
+  2. For raw HF files, create a config (e.g., `config/ingestion/covost2-en-fr.json`) listing only the
+     desired tarballs and use `make worker-run DATASET=covost2 ARGS="--artifact <filename>"`.
 - **Example**:
   ```bash
   make data-download DATASET=covost2 ARGS="--artifact README.md"

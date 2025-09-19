@@ -3,6 +3,7 @@
   "version": "docs",
   "source_url": "https://huggingface.co/datasets/facebook/covost2",
   "output_dir": "data/raw",
+  "distribution": "public",
   "artifacts": [
     {
       "filename": "README.md",

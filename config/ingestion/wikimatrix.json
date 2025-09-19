@@ -3,6 +3,7 @@
   "version": "docs",
   "source_url": "https://github.com/facebookresearch/LASER/tree/main/tasks/WikiMatrix",
   "output_dir": "data/raw",
+  "distribution": "restricted",
   "artifacts": [
     {
       "filename": "README.md",

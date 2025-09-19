@@ -2,7 +2,7 @@
 
 ## Overview
 - **Vision**: Reproduce “Transforming LLMs into Cross-modal and Cross-lingual Retrieval Systems” end-to-end, then extend it with Auto-Paper-driven ablations while maintaining auditable data governance.
-- **Current Phase**: Phase 2 – Data Discovery & Governance (kickoff 2025-09-18).
+- **Current Phase**: Phase 3 – Data Ingestion & Preprocessing (kickoff 2025-09-23).
 - **Time Horizon**: 2025-09-18 → 2026-01-31.
 
 ## Milestones
@@ -13,14 +13,16 @@
 | Dataset shortlist checkpoint (#1) | 2025-09-18 | Data Scout & Compliance Steward | Kickoff notes circulated | Completed – shortlist approved (FLEURS, CoVoST 2, MuST-C, VoxPopuli) |
 | Compliance assessment checkpoint (#2) | 2025-09-18 | Compliance Steward | Shortlist dataset matrix complete | Completed – legal restrictions documented, risk log updated |
 | Manifest & sign-off checkpoint (#3) | 2025-09-18 | Director | Compliance report ready | Completed – manifest + readiness report published |
-| Phase 3 readiness review | 2025-10-04 | Director | Phase 2 exit criteria met | Ingestion & preprocess backlog prioritized |
+| Phase 3 kickoff + alignment | 2025-09-23 | Director | Phase 2 exit criteria met | Kickoff minutes published with action owners |
+| Queue orchestration design (Redis/Prefect) | 2025-09-30 | Lead Architect & Ingestion Eng | Phase 3 kickoff, worker architecture draft | Design doc + PoC script ready for review |
+| Phase 3 readiness review | 2025-10-04 | Director | Kickoff minutes, queue design, ops runbook | Ingestion & preprocess backlog prioritized, owners assigned |
 
 ## Phase Progress
 | Phase | Status | Entry Criteria | Exit Criteria | Notes |
 |-------|--------|----------------|---------------|-------|
 | Phase 1 – Problem & Paper Scoping | ✅ Complete (follow-up pending) | Research curator + architect assigned | ADR-001 ratified, success metrics defined | Backup paper matrix refresh due 2025-09-23. |
 | Phase 2 – Data Discovery & Governance | ✅ Complete | ADR-001 finalized, rubric drafted | Dataset manifest + compliance sign-off captured | Shortlist, compliance readiness, manifest approved 2025-09-18. |
-| Phase 3 – Data Ingestion & Preprocessing | 🚧 In Progress | Phase 2 deliverables accepted | Reproducible ingestion + preprocess pipelines | Kickoff targeted for 2025-09-23 (see phase-3 kickoff agenda). |
+| Phase 3 – Data Ingestion & Preprocessing | 🚧 In Progress | Phase 2 deliverables accepted | Reproducible ingestion + preprocess pipelines | Kickoff on 2025-09-23; deliver queue orchestration and ops runbook before readiness review. |
 | Phase 4 – Model Implementation | ⏳ Planned | Preprocess spec stabilized | Baseline model + tests ready | Architect collecting reference implementations. |
 | Phase 5 – Training Orchestration | ⏳ Planned | Baseline model merged | Experiment runner operational | Training Ops evaluating logging stack options. |
 | Phase 6 – Evaluation & Analysis | ⏳ Planned | Training pipeline stabilized | Evaluation protocol validated | Evaluation agent to define metrics following Phase 5 demo. |
@@ -33,6 +35,8 @@
 | Backup paper coverage insufficient | Medium | Medium | Research Curator to refresh 2 alternative papers and update matrix | Director | Open |
 | Low-resource language coverage insufficient | Medium | Medium | Commission regional Data Scout clone to explore local corpora | Director | Monitoring |
 | Dataset checksums unavailable | Medium | Low | Coordinate with dataset maintainers; plan fallback hash generation | Data Scout | Open |
+| Queue orchestration infrastructure lag | High | Medium | Produce Redis/Prefect design + local enqueue PoC by 2025-09-30; flag infra sizing needs | Lead Architect | Open |
+| Operations readiness unclear (runbook, on-call) | Medium | Medium | Draft ops runbook with owner matrix and rotate review in kickoff minutes | Director | Open |
 | MuST-C non-commercial clause limits downstream sharing | Medium | Low | Restrict distribution to internal use; add NC-ND notices | Compliance Steward | Mitigated |
 | VoxPopuli share-alike obligation complicates model release | Medium | Medium | Apply CC BY-SA to external artifacts or keep internal; add notice in docs | Compliance Steward | Monitoring |
 | YouTube-derived datasets risk takedown | Medium | Medium | Track source URLs, respect removal requests, store derived features only | Data Scout | Monitoring |
@@ -46,10 +50,13 @@
 ## Upcoming Decisions
 - Confirm FLEURS as primary dataset for Phase 3 ingestion (and identify backups) by 2025-09-27.
 - Validate checksum tooling path (Python vs. shell-based) by 2025-09-25.
+- Deliver Redis/Prefect orchestration plan and capacity needs by 2025-09-30.
+- Publish Phase 3 operations runbook (owners, credential rotation cadence) before readiness review.
 - Decide whether to instrument W&B vs. local logging ahead of Phase 5 planning.
 
 ## Notes & References
 - `docs/notes/auto-paper-plan.md`
 - `docs/notes/agents/agent-briefs.md`
 - `.code/agents/` transcripts for Data Scout & Compliance Steward once Phase 2 work begins
+- `.code/agents/ingestion_engineer/` for Phase 3 run logs (to be archived)
 - `docs/adr/ADR-001-primary-paper.md`

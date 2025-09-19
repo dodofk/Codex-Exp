@@ -3,6 +3,7 @@
   "version": "docs",
   "source_url": "https://huggingface.co/datasets/facebook/voxpopuli",
   "output_dir": "data/raw",
+  "distribution": "restricted",
   "artifacts": [
     {
       "filename": "README.md",

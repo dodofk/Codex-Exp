@@ -3,7 +3,7 @@
 ## Summary
 - **Status**: Legal review completed 2025-09-18; all datasets approved with documented restrictions.
 - **Approved Datasets**: FLEURS, CoVoST 2, Multilingual LibriSpeech, MuST-C v2 (internal-only distribution), VoxPopuli (share-alike condition), How2/How2QA (features only), WikiMatrix, AudioCaps, Clotho.
-- **Action Required**: Add attribution/share-alike language to manifest & README; enforce internal-use restrictions where noted.
+- **Update (2025-09-19)**: Manifest and README compliance notices refreshed to reflect attribution and share-alike requirements; enforcement of internal-use restrictions tracked via ingestion configs.
 
 ## Dataset Compliance Table
 | Dataset | License | Decision | Mitigations | Notes |
