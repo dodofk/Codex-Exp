@@ -1,0 +1,1838 @@
+{
+  "name": "fleurs",
+  "version": "v1",
+  "source_url": "https://huggingface.co/datasets/google/fleurs",
+  "checksum_manifest": "https://huggingface.co/datasets/google/fleurs#data-fields",
+  "output_dir": "data/raw",
+  "distribution": "public",
+  "license": "CC-BY 4.0 (C) Google LLC",
+  "notes": "Subset of 67 languages (~130 GiB) chosen by ascending size to stay within local free space.",
+  "artifacts": [
+    {
+      "filename": ".gitattributes",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/.gitattributes"
+    },
+    {
+      "filename": "README.md",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/README.md"
+    },
+    {
+      "filename": "af_za/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/af_za/audio/dev.tar.gz",
+      "sha256": "0cf5cfa5390f3a6c81e05dcf0d6d140fb678014cf44d0ab4b432ce7184187641"
+    },
+    {
+      "filename": "af_za/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/af_za/audio/test.tar.gz",
+      "sha256": "c76ea67a8adfd83ac14e620327a3d5da83cdbad6b8f95a9c53c867c71411c0b2"
+    },
+    {
+      "filename": "af_za/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/af_za/audio/train.tar.gz",
+      "sha256": "9d0dcc929086ef61d40036112447bec41ae3fd74d6ad8490625f4329bb6cb010"
+    },
+    {
+      "filename": "af_za/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/af_za/dev.tsv"
+    },
+    {
+      "filename": "af_za/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/af_za/test.tsv"
+    },
+    {
+      "filename": "af_za/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/af_za/train.tsv"
+    },
+    {
+      "filename": "am_et/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/am_et/audio/dev.tar.gz",
+      "sha256": "7d91176bd88f3a6c8a278809b75871300c3b0ae0650b250a5891f72e285fa20a"
+    },
+    {
+      "filename": "am_et/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/am_et/audio/test.tar.gz",
+      "sha256": "9a5dc623af946751766f1df0ee6195e06a4c41f1ae83cabc1479858254adb309"
+    },
+    {
+      "filename": "am_et/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/am_et/audio/train.tar.gz",
+      "sha256": "8406307028b4792365ac2fc93896ed49cdf0eb4a4aaadc826d79bfd2c6ea5c50"
+    },
+    {
+      "filename": "am_et/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/am_et/dev.tsv"
+    },
+    {
+      "filename": "am_et/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/am_et/test.tsv"
+    },
+    {
+      "filename": "am_et/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/am_et/train.tsv"
+    },
+    {
+      "filename": "ar_eg/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ar_eg/audio/dev.tar.gz",
+      "sha256": "22271b3500c0e952aedbf0a6d7d3b959a91e1f02612293dce761fe5c87b66117"
+    },
+    {
+      "filename": "ar_eg/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ar_eg/audio/test.tar.gz",
+      "sha256": "787dc348725c0924ff58c8e379d4ef41a7e488dc2ab2990a0eba4a063856edb1"
+    },
+    {
+      "filename": "ar_eg/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ar_eg/audio/train.tar.gz",
+      "sha256": "b19fa9435c0d7587bf0ede7c9da134567b2eb55a06e2e7523547f0a6fcb3eef7"
+    },
+    {
+      "filename": "ar_eg/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ar_eg/dev.tsv"
+    },
+    {
+      "filename": "ar_eg/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ar_eg/test.tsv"
+    },
+    {
+      "filename": "ar_eg/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ar_eg/train.tsv"
+    },
+    {
+      "filename": "ast_es/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ast_es/audio/dev.tar.gz",
+      "sha256": "67acd06f34a0d8b30323ee28dc66143f9546aefc52b177008d885ad7174e9e98"
+    },
+    {
+      "filename": "ast_es/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ast_es/audio/test.tar.gz",
+      "sha256": "06b80036148e4d9e5cd3d3922057abfce01f7ab15cbcd4b28590ab8d915d6e62"
+    },
+    {
+      "filename": "ast_es/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ast_es/audio/train.tar.gz",
+      "sha256": "51806649c5447153f427b5c4570b1da9f5ce98873f5e15bf9a118d05685f400a"
+    },
+    {
+      "filename": "ast_es/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ast_es/dev.tsv"
+    },
+    {
+      "filename": "ast_es/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ast_es/test.tsv"
+    },
+    {
+      "filename": "ast_es/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ast_es/train.tsv"
+    },
+    {
+      "filename": "az_az/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/az_az/audio/dev.tar.gz",
+      "sha256": "98d0a64d7b5eb5372160bc17e45bee9228da784e6137203770a7b2e00272d21d"
+    },
+    {
+      "filename": "az_az/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/az_az/audio/test.tar.gz",
+      "sha256": "f2ef9ec467420e2accb50238c7747adc9532a3630a857f0edbe0929bf3c1f26d"
+    },
+    {
+      "filename": "az_az/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/az_az/audio/train.tar.gz",
+      "sha256": "259e6d57cb34d52a63aa028c21b55b36af38489bfc0a54c38850aca15341fc07"
+    },
+    {
+      "filename": "az_az/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/az_az/dev.tsv"
+    },
+    {
+      "filename": "az_az/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/az_az/test.tsv"
+    },
+    {
+      "filename": "az_az/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/az_az/train.tsv"
+    },
+    {
+      "filename": "bg_bg/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bg_bg/audio/dev.tar.gz",
+      "sha256": "6a03dc3d5a4dd8f2dcb24716438aea8094779d7966a0a7fc5fcfd2c380435665"
+    },
+    {
+      "filename": "bg_bg/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bg_bg/audio/test.tar.gz",
+      "sha256": "8ecfcc9dd44186b3ea5a0bc4a867cdc3efdfe3049bba5fd3de9b8af078abba46"
+    },
+    {
+      "filename": "bg_bg/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bg_bg/audio/train.tar.gz",
+      "sha256": "084d5af139cb9c6207b9e40aeb8ee8ab7314fe2a769a2f3239856d71bae15323"
+    },
+    {
+      "filename": "bg_bg/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bg_bg/dev.tsv"
+    },
+    {
+      "filename": "bg_bg/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bg_bg/test.tsv"
+    },
+    {
+      "filename": "bg_bg/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bg_bg/train.tsv"
+    },
+    {
+      "filename": "bs_ba/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bs_ba/audio/dev.tar.gz",
+      "sha256": "cfa7f705623119f04b9e893feef2681637775a4566b5770d11a52a6b7fd7bd14"
+    },
+    {
+      "filename": "bs_ba/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bs_ba/audio/test.tar.gz",
+      "sha256": "028e2bf89271f6751abde10836645176e4c6e90083505d4f8e4a83aca7d31cc6"
+    },
+    {
+      "filename": "bs_ba/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bs_ba/audio/train.tar.gz",
+      "sha256": "8c3d96ebbdf632b2703ca4e6482c4b231ed274b8a748c49e2bcc1c0046a7c315"
+    },
+    {
+      "filename": "bs_ba/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bs_ba/dev.tsv"
+    },
+    {
+      "filename": "bs_ba/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bs_ba/test.tsv"
+    },
+    {
+      "filename": "bs_ba/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/bs_ba/train.tsv"
+    },
+    {
+      "filename": "ca_es/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ca_es/audio/dev.tar.gz",
+      "sha256": "6a5c76d541797e0c7e8d805f25499ce26db70f2fdc1ea31362af876f12b4210c"
+    },
+    {
+      "filename": "ca_es/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ca_es/audio/test.tar.gz",
+      "sha256": "1dd0c257cd36a431027b00a8e836f6e2a70af3e1c8a2d8e7608c055df9dd42e9"
+    },
+    {
+      "filename": "ca_es/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ca_es/audio/train.tar.gz",
+      "sha256": "b93d54db7249feb312c24a579686e7a03bd1ec59c281a3abdd6e1d9c1ed688e3"
+    },
+    {
+      "filename": "ca_es/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ca_es/dev.tsv"
+    },
+    {
+      "filename": "ca_es/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ca_es/test.tsv"
+    },
+    {
+      "filename": "ca_es/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ca_es/train.tsv"
+    },
+    {
+      "filename": "cmn_hans_cn/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cmn_hans_cn/audio/dev.tar.gz",
+      "sha256": "3bc33212d5974eef7feb04bc4792458d6cd7e14ff10a1a24772f3c45ea87a822"
+    },
+    {
+      "filename": "cmn_hans_cn/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cmn_hans_cn/audio/test.tar.gz",
+      "sha256": "09d19ad18f5d7e91076880807e866cd16abd924c7052b55f71cdae91714fc166"
+    },
+    {
+      "filename": "cmn_hans_cn/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cmn_hans_cn/audio/train.tar.gz",
+      "sha256": "812346f79314a46347e1ed481c4948626fa63a6220e511907d1ec5860855df68"
+    },
+    {
+      "filename": "cmn_hans_cn/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cmn_hans_cn/dev.tsv"
+    },
+    {
+      "filename": "cmn_hans_cn/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cmn_hans_cn/test.tsv"
+    },
+    {
+      "filename": "cmn_hans_cn/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cmn_hans_cn/train.tsv"
+    },
+    {
+      "filename": "cs_cz/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cs_cz/audio/dev.tar.gz",
+      "sha256": "a4befac721e3decca3e3a882dbf2e6731c49a73a2052de5926dd04865754d7b5"
+    },
+    {
+      "filename": "cs_cz/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cs_cz/audio/test.tar.gz",
+      "sha256": "52c6278419ec578089c19183185d082b3759029adda5538c279cf06a7e460bc1"
+    },
+    {
+      "filename": "cs_cz/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cs_cz/audio/train.tar.gz",
+      "sha256": "a08b3ac6ff7bf7f6cd5a71c6b7fb760ee06df58ab2824be21402129ee52f9ff2"
+    },
+    {
+      "filename": "cs_cz/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cs_cz/dev.tsv"
+    },
+    {
+      "filename": "cs_cz/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cs_cz/test.tsv"
+    },
+    {
+      "filename": "cs_cz/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/cs_cz/train.tsv"
+    },
+    {
+      "filename": "da_dk/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/da_dk/audio/dev.tar.gz",
+      "sha256": "77e17d23de3a3fc1381309525efcf4ddc6cda7b7bbaaea7bd7a84b7b69ccd21c"
+    },
+    {
+      "filename": "da_dk/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/da_dk/audio/test.tar.gz",
+      "sha256": "2b49ad7a59ea8066f5b719ecc9c3e111fe00a9260ce8f0a0e62c52b7fb6f8456"
+    },
+    {
+      "filename": "da_dk/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/da_dk/audio/train.tar.gz",
+      "sha256": "44f976d35202aa54c7e4eec85aa5c50d23771ae7b58d1c4f1c7bb03aaabbc2fc"
+    },
+    {
+      "filename": "da_dk/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/da_dk/dev.tsv"
+    },
+    {
+      "filename": "da_dk/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/da_dk/test.tsv"
+    },
+    {
+      "filename": "da_dk/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/da_dk/train.tsv"
+    },
+    {
+      "filename": "de_de/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/de_de/audio/dev.tar.gz",
+      "sha256": "72cac13bbddbddf674d8102a9e7b90a3b1db5d777ed92e88eccc5ae69cb8fc9d"
+    },
+    {
+      "filename": "de_de/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/de_de/audio/test.tar.gz",
+      "sha256": "e86b42dfcdef749926cd92135045f87c25966c09e50d01c401adb04ee7d8628f"
+    },
+    {
+      "filename": "de_de/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/de_de/audio/train.tar.gz",
+      "sha256": "6708e4052d924a9b18d3f48a7e308d35adff4a0352b1ca26ce21ce0b810ddc11"
+    },
+    {
+      "filename": "de_de/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/de_de/dev.tsv"
+    },
+    {
+      "filename": "de_de/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/de_de/test.tsv"
+    },
+    {
+      "filename": "de_de/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/de_de/train.tsv"
+    },
+    {
+      "filename": "el_gr/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/el_gr/audio/dev.tar.gz",
+      "sha256": "a927aca3d5ab5694b219433a1d12fd3bcd02da577783c6624c99012ddbf5c1cf"
+    },
+    {
+      "filename": "el_gr/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/el_gr/audio/test.tar.gz",
+      "sha256": "dfb63d8d6da161b25d374ac34dce06e23b839958cf4086d49e25f0048bab2a38"
+    },
+    {
+      "filename": "el_gr/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/el_gr/audio/train.tar.gz",
+      "sha256": "f7b63bf58310b8983503815b793adf96f15a24c4bf0cd4dac3563e191b25aaf5"
+    },
+    {
+      "filename": "el_gr/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/el_gr/dev.tsv"
+    },
+    {
+      "filename": "el_gr/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/el_gr/test.tsv"
+    },
+    {
+      "filename": "el_gr/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/el_gr/train.tsv"
+    },
+    {
+      "filename": "en_us/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/audio/dev.tar.gz",
+      "sha256": "2658fda72f199e12676ecac9415094667a4e14e149b146e568ea00b2a2f0954c"
+    },
+    {
+      "filename": "en_us/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/audio/test.tar.gz",
+      "sha256": "d9c2e37b41aacd41bc283554a0a82b5476b36887049774ecb2819dcaaa55a356"
+    },
+    {
+      "filename": "en_us/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/audio/train.tar.gz",
+      "sha256": "5f4491948c2bd29ac00f4b8afae2378f0a1dcdde4041b5cd284a80dff01fa9f5"
+    },
+    {
+      "filename": "en_us/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/dev.tsv"
+    },
+    {
+      "filename": "en_us/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/test.tsv"
+    },
+    {
+      "filename": "en_us/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/train.tsv"
+    },
+    {
+      "filename": "es_419/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/audio/dev.tar.gz",
+      "sha256": "94f0f3d9fd89c0496385bf0991f2565410cc489a73dd18cafa0ee0177dc5c815"
+    },
+    {
+      "filename": "es_419/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/audio/test.tar.gz",
+      "sha256": "981802f6c828fd214fcf8bfc1036d80c9184b6eeb5650b3f7882f8affec046c9"
+    },
+    {
+      "filename": "es_419/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/audio/train.tar.gz",
+      "sha256": "f832ccb74a59f53ec3bceb77e26826d0516ba6a2e8cd1e9a7f8876615a056985"
+    },
+    {
+      "filename": "es_419/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/dev.tsv"
+    },
+    {
+      "filename": "es_419/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/test.tsv"
+    },
+    {
+      "filename": "es_419/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/train.tsv"
+    },
+    {
+      "filename": "et_ee/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/et_ee/audio/dev.tar.gz",
+      "sha256": "ad7c8a257cea5cd6b86df76bae30998b88b48fa9d5e88d8439af55c33424d3e7"
+    },
+    {
+      "filename": "et_ee/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/et_ee/audio/test.tar.gz",
+      "sha256": "cdece29c50357790dc87f034242d54066fcacbc694cd057e75a29f2f56c14cbf"
+    },
+    {
+      "filename": "et_ee/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/et_ee/audio/train.tar.gz",
+      "sha256": "0a9e8fa13cde853c17fd41cdb36d6bb2f7347ad0026a02e61d45e17e163fc34b"
+    },
+    {
+      "filename": "et_ee/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/et_ee/dev.tsv"
+    },
+    {
+      "filename": "et_ee/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/et_ee/test.tsv"
+    },
+    {
+      "filename": "et_ee/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/et_ee/train.tsv"
+    },
+    {
+      "filename": "fi_fi/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fi_fi/audio/dev.tar.gz",
+      "sha256": "5298b34ee240b7d33e0d473062b75be6eee2804d84616593cea6348c25dfb544"
+    },
+    {
+      "filename": "fi_fi/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fi_fi/audio/test.tar.gz",
+      "sha256": "028efe8b0c52555633280661c2837013c4a1585c08492dcb993bb024255fc1c8"
+    },
+    {
+      "filename": "fi_fi/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fi_fi/audio/train.tar.gz",
+      "sha256": "936405bcde784c75c7816853abf58a09f7de3109418314dcd4ae21674db0d08f"
+    },
+    {
+      "filename": "fi_fi/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fi_fi/dev.tsv"
+    },
+    {
+      "filename": "fi_fi/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fi_fi/test.tsv"
+    },
+    {
+      "filename": "fi_fi/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fi_fi/train.tsv"
+    },
+    {
+      "filename": "fleurs.py",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/fleurs.py"
+    },
+    {
+      "filename": "fr_fr/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fr_fr/audio/dev.tar.gz",
+      "sha256": "f2f065dec3b02212e27151c51162d2213df55d0a8efc6b88e36992673ddf66e6"
+    },
+    {
+      "filename": "fr_fr/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fr_fr/audio/test.tar.gz",
+      "sha256": "d23690e102f373554d1b544cd2ff1e76e4fedeb04953c0b72751a1b7c518cfdd"
+    },
+    {
+      "filename": "fr_fr/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fr_fr/audio/train.tar.gz",
+      "sha256": "39b5bad1f61d3ae4ef64c2eb16f9524ffb21d8568965dd71b09702befdbd7f95"
+    },
+    {
+      "filename": "fr_fr/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fr_fr/dev.tsv"
+    },
+    {
+      "filename": "fr_fr/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fr_fr/test.tsv"
+    },
+    {
+      "filename": "fr_fr/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/fr_fr/train.tsv"
+    },
+    {
+      "filename": "gl_es/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gl_es/audio/dev.tar.gz",
+      "sha256": "8f5b6b0cfdc093fb391940add22d8011b49ba0da9fd15785ab2ba5dd9bb8b443"
+    },
+    {
+      "filename": "gl_es/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gl_es/audio/test.tar.gz",
+      "sha256": "f3e648a783e82180d6463d0e9d7a2038d2a16cbd05c2f0c248666bc9f8009bd7"
+    },
+    {
+      "filename": "gl_es/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gl_es/audio/train.tar.gz",
+      "sha256": "5f9f5d4f4217327f9eabc2b82373a5c37d282907fa0b0ace5ddd1c3bb94bce1c"
+    },
+    {
+      "filename": "gl_es/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gl_es/dev.tsv"
+    },
+    {
+      "filename": "gl_es/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gl_es/test.tsv"
+    },
+    {
+      "filename": "gl_es/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gl_es/train.tsv"
+    },
+    {
+      "filename": "gu_in/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gu_in/audio/dev.tar.gz",
+      "sha256": "67b61fe0b78c80585ffc3743eba2528e18d756819495abd3c603e0824c0b78bc"
+    },
+    {
+      "filename": "gu_in/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gu_in/audio/test.tar.gz",
+      "sha256": "5fc83e07252460d44c6789909bb09c44839e0107b39b730ab746472d7f9a1583"
+    },
+    {
+      "filename": "gu_in/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gu_in/audio/train.tar.gz",
+      "sha256": "160af68bd04acb38a07b602beda09ba788d71cb8ff6862a90461e55770aac607"
+    },
+    {
+      "filename": "gu_in/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gu_in/dev.tsv"
+    },
+    {
+      "filename": "gu_in/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gu_in/test.tsv"
+    },
+    {
+      "filename": "gu_in/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/gu_in/train.tsv"
+    },
+    {
+      "filename": "he_il/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/he_il/audio/dev.tar.gz",
+      "sha256": "3752e56b764bd0ed531afa805aa589cf4153d9585a3c034faafbf6c852663652"
+    },
+    {
+      "filename": "he_il/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/he_il/audio/test.tar.gz",
+      "sha256": "f09f2335973d7ff5469c0e88fc37b528e66ec2ff2af5346438daacb3fbd84a53"
+    },
+    {
+      "filename": "he_il/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/he_il/audio/train.tar.gz",
+      "sha256": "f088561e2505dc18a4029990065728ef22dfd2d5ee865f888dbd69f78b57ee5a"
+    },
+    {
+      "filename": "he_il/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/he_il/dev.tsv"
+    },
+    {
+      "filename": "he_il/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/he_il/test.tsv"
+    },
+    {
+      "filename": "he_il/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/he_il/train.tsv"
+    },
+    {
+      "filename": "hi_in/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hi_in/audio/dev.tar.gz",
+      "sha256": "9adbca6d6fc70e40c121910941bcd7c8906eee60b402b6d21b4bd160e20030c7"
+    },
+    {
+      "filename": "hi_in/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hi_in/audio/test.tar.gz",
+      "sha256": "47c238b9cf7016ba596639bb3038b0c89dc6e85759f16d09c4f58c6dfa25c65f"
+    },
+    {
+      "filename": "hi_in/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hi_in/audio/train.tar.gz",
+      "sha256": "bb6f52bfb27ca91c54539480111163eb9245305008cfe0526c6f4af3bfdd04e9"
+    },
+    {
+      "filename": "hi_in/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hi_in/dev.tsv"
+    },
+    {
+      "filename": "hi_in/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hi_in/test.tsv"
+    },
+    {
+      "filename": "hi_in/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hi_in/train.tsv"
+    },
+    {
+      "filename": "hr_hr/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hr_hr/audio/dev.tar.gz",
+      "sha256": "76ab5cc70cd945b8464bd32e607d1b7c6afafc8b68b3bd47c82d6a120f90cf10"
+    },
+    {
+      "filename": "hr_hr/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hr_hr/audio/test.tar.gz",
+      "sha256": "1b8712ddbeecab54ca44f40ff864f905a9ccc3a7d7a830062ef8d14a9c87076b"
+    },
+    {
+      "filename": "hr_hr/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hr_hr/audio/train.tar.gz",
+      "sha256": "d472a34126d4055a0ab61c08abe2c9cbaa78ad126cd78089da6b783a5c33f1d4"
+    },
+    {
+      "filename": "hr_hr/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hr_hr/dev.tsv"
+    },
+    {
+      "filename": "hr_hr/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hr_hr/test.tsv"
+    },
+    {
+      "filename": "hr_hr/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hr_hr/train.tsv"
+    },
+    {
+      "filename": "hu_hu/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hu_hu/audio/dev.tar.gz",
+      "sha256": "ad1a82e5d62e727434092b0cc0588fcbfb4e1e088d6f9f4e44d2c5507ab1032d"
+    },
+    {
+      "filename": "hu_hu/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hu_hu/audio/test.tar.gz",
+      "sha256": "d2335311350b4c9a6a1811b3ca3faff772a97befe0a7106dbda1edf675b0cb8a"
+    },
+    {
+      "filename": "hu_hu/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hu_hu/audio/train.tar.gz",
+      "sha256": "60f1f1a620046a245399d806e9e7fcf568b8413f427677bf7638556af1125e8b"
+    },
+    {
+      "filename": "hu_hu/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hu_hu/dev.tsv"
+    },
+    {
+      "filename": "hu_hu/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hu_hu/test.tsv"
+    },
+    {
+      "filename": "hu_hu/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hu_hu/train.tsv"
+    },
+    {
+      "filename": "hy_am/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hy_am/audio/dev.tar.gz",
+      "sha256": "d881e8f14c602bafe8953f5770bd387c37cdc6bbef8188c7316dd468166bcb33"
+    },
+    {
+      "filename": "hy_am/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hy_am/audio/test.tar.gz",
+      "sha256": "786d62c511962b8d3c4a4a208dc6402f1da0a6a06eb6f00274a7deaeb572e0de"
+    },
+    {
+      "filename": "hy_am/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hy_am/audio/train.tar.gz",
+      "sha256": "d5bfa2269de55feb2039f3967b70a1c547dd2fb2f61227efc47c7d673ca56c97"
+    },
+    {
+      "filename": "hy_am/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hy_am/dev.tsv"
+    },
+    {
+      "filename": "hy_am/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hy_am/test.tsv"
+    },
+    {
+      "filename": "hy_am/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/hy_am/train.tsv"
+    },
+    {
+      "filename": "id_id/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/id_id/audio/dev.tar.gz",
+      "sha256": "74e5f1c8676a321dc4c34944b171846d40923dabe765a767d8dbc2f56cac3142"
+    },
+    {
+      "filename": "id_id/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/id_id/audio/test.tar.gz",
+      "sha256": "bf7e7f608f8834012d7f79a583b6b0dd5bb82e74e2f5fb6336fc99d3af7ffcf8"
+    },
+    {
+      "filename": "id_id/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/id_id/audio/train.tar.gz",
+      "sha256": "44983febf5a3d9670352f9765d05b9238056bf6ab64ee1479af198670597c11d"
+    },
+    {
+      "filename": "id_id/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/id_id/dev.tsv"
+    },
+    {
+      "filename": "id_id/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/id_id/test.tsv"
+    },
+    {
+      "filename": "id_id/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/id_id/train.tsv"
+    },
+    {
+      "filename": "is_is/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/is_is/audio/dev.tar.gz",
+      "sha256": "2aa351ba6416cf40c79bb256957ca78c7137c81125a2878857cf54a1c7e06eaf"
+    },
+    {
+      "filename": "is_is/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/is_is/audio/test.tar.gz",
+      "sha256": "fa03338a41ee5b18537b5a04955a0fa1df120e11144ed34d21acfa1e8fd40836"
+    },
+    {
+      "filename": "is_is/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/is_is/audio/train.tar.gz",
+      "sha256": "06b6cd7e68c9ff7e6b2f2eaf2c87d6da85a8072943b1f3a54f0dd60bab3d1547"
+    },
+    {
+      "filename": "is_is/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/is_is/dev.tsv"
+    },
+    {
+      "filename": "is_is/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/is_is/test.tsv"
+    },
+    {
+      "filename": "is_is/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/is_is/train.tsv"
+    },
+    {
+      "filename": "it_it/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/it_it/audio/dev.tar.gz",
+      "sha256": "9ebd7a079958e9980b3f2d91766a968fbc4d60c615a775b064acfe5bd2bc4472"
+    },
+    {
+      "filename": "it_it/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/it_it/audio/test.tar.gz",
+      "sha256": "97dbaedbfa52f4fa4a7b380be90b343066330b8526e1a88f5ab9f82f71f1758e"
+    },
+    {
+      "filename": "it_it/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/it_it/audio/train.tar.gz",
+      "sha256": "6a88b1850e27834a8f24d5eb4d94abf14828da822778b029be2fbb61e01d16b4"
+    },
+    {
+      "filename": "it_it/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/it_it/dev.tsv"
+    },
+    {
+      "filename": "it_it/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/it_it/test.tsv"
+    },
+    {
+      "filename": "it_it/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/it_it/train.tsv"
+    },
+    {
+      "filename": "ja_jp/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ja_jp/audio/dev.tar.gz",
+      "sha256": "2547f19203e1272aeba99c2235326fea525d6cfb9348bafbea2c3a7929e8e441"
+    },
+    {
+      "filename": "ja_jp/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ja_jp/audio/test.tar.gz",
+      "sha256": "5de465fa7aaafc4e2c13aba44771550b8cd2dd29bb9b265daeb6d92ca8e0c136"
+    },
+    {
+      "filename": "ja_jp/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ja_jp/audio/train.tar.gz",
+      "sha256": "9a67e38bff0077e74dded7c7b735f7958f1d1d2075e330e62f95c9e18deb30a7"
+    },
+    {
+      "filename": "ja_jp/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ja_jp/dev.tsv"
+    },
+    {
+      "filename": "ja_jp/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ja_jp/test.tsv"
+    },
+    {
+      "filename": "ja_jp/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ja_jp/train.tsv"
+    },
+    {
+      "filename": "ka_ge/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ka_ge/audio/dev.tar.gz",
+      "sha256": "60380992bc06ced7181d350425e9a578d8de91ef807242e7cec0f8bccbcdb61f"
+    },
+    {
+      "filename": "ka_ge/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ka_ge/audio/test.tar.gz",
+      "sha256": "072b5e75864ae962f9f95709c2e1ef2c008c0e159082c9de01342e8695df077e"
+    },
+    {
+      "filename": "ka_ge/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ka_ge/audio/train.tar.gz",
+      "sha256": "7eb86b8bf93fd96116f078c7bdf897b858ddd89a92b246cb43cabcd349bf3094"
+    },
+    {
+      "filename": "ka_ge/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ka_ge/dev.tsv"
+    },
+    {
+      "filename": "ka_ge/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ka_ge/test.tsv"
+    },
+    {
+      "filename": "ka_ge/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ka_ge/train.tsv"
+    },
+    {
+      "filename": "km_kh/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/km_kh/audio/dev.tar.gz",
+      "sha256": "59854dbc8ad21b041919125ea53260a57f061eec6c73f52cbcc03531afe646b6"
+    },
+    {
+      "filename": "km_kh/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/km_kh/audio/test.tar.gz",
+      "sha256": "6cf389e24c55b7b7d397ba944f1acbbba5e76c9ab1506651ab51e19f5b9dc8d8"
+    },
+    {
+      "filename": "km_kh/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/km_kh/audio/train.tar.gz",
+      "sha256": "71b80075f374844b2238986cdb076a5b87c3fa58e5e593bb20effc166f3521e9"
+    },
+    {
+      "filename": "km_kh/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/km_kh/dev.tsv"
+    },
+    {
+      "filename": "km_kh/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/km_kh/test.tsv"
+    },
+    {
+      "filename": "km_kh/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/km_kh/train.tsv"
+    },
+    {
+      "filename": "kn_in/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/kn_in/audio/dev.tar.gz",
+      "sha256": "328125e46f46552790fb8ad83f0ad8abab9a5701c61f8ff73231c82a958055ed"
+    },
+    {
+      "filename": "kn_in/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/kn_in/audio/test.tar.gz",
+      "sha256": "e9bd97241fea7373d554b37b30f13ae8dbe51549f1675334c7d824e0c4ccd51f"
+    },
+    {
+      "filename": "kn_in/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/kn_in/audio/train.tar.gz",
+      "sha256": "7a3b64baf0a75b4167f17ac727d079ff7223504c1a532a1a789aa166f1d7be02"
+    },
+    {
+      "filename": "kn_in/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/kn_in/dev.tsv"
+    },
+    {
+      "filename": "kn_in/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/kn_in/test.tsv"
+    },
+    {
+      "filename": "kn_in/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/kn_in/train.tsv"
+    },
+    {
+      "filename": "ko_kr/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ko_kr/audio/dev.tar.gz",
+      "sha256": "496edcb5323e75b4a2830f5b5623684a0baf86d3728101853fd4fe503372157c"
+    },
+    {
+      "filename": "ko_kr/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ko_kr/audio/test.tar.gz",
+      "sha256": "3489e529f2aad18d3357b746c5f955941d258b79dc60d8a102d5bced2a223184"
+    },
+    {
+      "filename": "ko_kr/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ko_kr/audio/train.tar.gz",
+      "sha256": "985d45a1ab3967f6851761bac8f7f325360eba3381ffed96f9ce920d3c24e9d9"
+    },
+    {
+      "filename": "ko_kr/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ko_kr/dev.tsv"
+    },
+    {
+      "filename": "ko_kr/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ko_kr/test.tsv"
+    },
+    {
+      "filename": "ko_kr/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ko_kr/train.tsv"
+    },
+    {
+      "filename": "ky_kg/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ky_kg/audio/dev.tar.gz",
+      "sha256": "8780c897c5dc88faa16981f361b081b3773bf80d4c8e9e12fea2873986d08bdd"
+    },
+    {
+      "filename": "ky_kg/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ky_kg/audio/test.tar.gz",
+      "sha256": "e7d33ece89fbf39890fc097ee2e5ab090a10dd5f2dc22ca4ae5e4427f4b04d17"
+    },
+    {
+      "filename": "ky_kg/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ky_kg/audio/train.tar.gz",
+      "sha256": "ddf38e01642f77f08e139de595350044a516612c082db189caeb01a05b8f0fd4"
+    },
+    {
+      "filename": "ky_kg/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ky_kg/dev.tsv"
+    },
+    {
+      "filename": "ky_kg/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ky_kg/test.tsv"
+    },
+    {
+      "filename": "ky_kg/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ky_kg/train.tsv"
+    },
+    {
+      "filename": "lb_lu/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lb_lu/audio/dev.tar.gz",
+      "sha256": "80c3546e83427b57519211d0a316f184c4a4a496aa7360eb7a63c4c1de9d0890"
+    },
+    {
+      "filename": "lb_lu/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lb_lu/audio/test.tar.gz",
+      "sha256": "c26498520d921ed633783ee6d0576590416f949e1b18f1ac85aac386511d4b82"
+    },
+    {
+      "filename": "lb_lu/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lb_lu/audio/train.tar.gz",
+      "sha256": "d1307ee8a7c901652ec5b519d8d80018c2c85e6c5519dcf0c45c79e98e777100"
+    },
+    {
+      "filename": "lb_lu/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lb_lu/dev.tsv"
+    },
+    {
+      "filename": "lb_lu/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lb_lu/test.tsv"
+    },
+    {
+      "filename": "lb_lu/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lb_lu/train.tsv"
+    },
+    {
+      "filename": "lo_la/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lo_la/audio/dev.tar.gz",
+      "sha256": "9e872fe33a65030030673da77015439e86f0442e2c26aabc662d00c12c2c9f18"
+    },
+    {
+      "filename": "lo_la/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lo_la/audio/test.tar.gz",
+      "sha256": "26a4d969c101d755df37a93fd81646e1ef5da7b1c6bfc7a5365ec7198c34d10f"
+    },
+    {
+      "filename": "lo_la/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lo_la/audio/train.tar.gz",
+      "sha256": "45605a31c6ac519125006cfec67450c88b2995b4b7d7ed4c1034573bc37ce560"
+    },
+    {
+      "filename": "lo_la/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lo_la/dev.tsv"
+    },
+    {
+      "filename": "lo_la/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lo_la/test.tsv"
+    },
+    {
+      "filename": "lo_la/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lo_la/train.tsv"
+    },
+    {
+      "filename": "lt_lt/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lt_lt/audio/dev.tar.gz",
+      "sha256": "68e14b327f8d6ad3aa31525b1a3f6853e9038949ef2b28d25085c96de8731109"
+    },
+    {
+      "filename": "lt_lt/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lt_lt/audio/test.tar.gz",
+      "sha256": "ff599eb74b96540707fad072926eba5d92e9f0991f8eb8838dbc4c9ca2a19d93"
+    },
+    {
+      "filename": "lt_lt/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lt_lt/audio/train.tar.gz",
+      "sha256": "f64a602a2694f23a2d08823bcb65e636c0fdd65b0cf7c54de90cc161e4519ff9"
+    },
+    {
+      "filename": "lt_lt/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lt_lt/dev.tsv"
+    },
+    {
+      "filename": "lt_lt/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lt_lt/test.tsv"
+    },
+    {
+      "filename": "lt_lt/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lt_lt/train.tsv"
+    },
+    {
+      "filename": "luo_ke/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/luo_ke/audio/dev.tar.gz",
+      "sha256": "4c37450a19a366a7b1212354d535e8212e6768d74f51ad896df8c94001af10bb"
+    },
+    {
+      "filename": "luo_ke/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/luo_ke/audio/test.tar.gz",
+      "sha256": "83b6b2b0b5f7c25b4e237eb6da861167099ff0b82b1ea8a696361b18ff56e409"
+    },
+    {
+      "filename": "luo_ke/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/luo_ke/audio/train.tar.gz",
+      "sha256": "2f3b84815078fc02648f78205cb313f13fe6d785ad3c08689cfcda41debf16f2"
+    },
+    {
+      "filename": "luo_ke/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/luo_ke/dev.tsv"
+    },
+    {
+      "filename": "luo_ke/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/luo_ke/test.tsv"
+    },
+    {
+      "filename": "luo_ke/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/luo_ke/train.tsv"
+    },
+    {
+      "filename": "lv_lv/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lv_lv/audio/dev.tar.gz",
+      "sha256": "ca6e72a2dfb1e3c9da2be50b50fa7d133977c18642aa45479808e7513bdfb505"
+    },
+    {
+      "filename": "lv_lv/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lv_lv/audio/test.tar.gz",
+      "sha256": "43186c8407ebdb992f4117419a12f53037358de1ef67896598173f4998ff884b"
+    },
+    {
+      "filename": "lv_lv/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lv_lv/audio/train.tar.gz",
+      "sha256": "11defc182e0bf4701362d6079c3c88fea8c8b8b94b2595b92e543c5f2f38cf3f"
+    },
+    {
+      "filename": "lv_lv/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lv_lv/dev.tsv"
+    },
+    {
+      "filename": "lv_lv/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lv_lv/test.tsv"
+    },
+    {
+      "filename": "lv_lv/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/lv_lv/train.tsv"
+    },
+    {
+      "filename": "metadata.zip",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/metadata.zip",
+      "sha256": "aca40140670aeb810b5b0963b0a6c573e9bd5206c66e2fbab6ff2571f0f3d1b7"
+    },
+    {
+      "filename": "mk_mk/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mk_mk/audio/dev.tar.gz",
+      "sha256": "a591efe6f36b288f4b346c10f637479b4379cc05089ec21de6b41d723ba71b91"
+    },
+    {
+      "filename": "mk_mk/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mk_mk/audio/test.tar.gz",
+      "sha256": "b1d410ecbb9baeca7d62b7a03f31b4a10bd44010571b50f704f4c04c4cda2a3c"
+    },
+    {
+      "filename": "mk_mk/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mk_mk/audio/train.tar.gz",
+      "sha256": "a4157f796e8e9e6cec0ac84b1227e70b1605183fb1f9d52ba0af20b6079f3365"
+    },
+    {
+      "filename": "mk_mk/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mk_mk/dev.tsv"
+    },
+    {
+      "filename": "mk_mk/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mk_mk/test.tsv"
+    },
+    {
+      "filename": "mk_mk/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mk_mk/train.tsv"
+    },
+    {
+      "filename": "mn_mn/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mn_mn/audio/dev.tar.gz",
+      "sha256": "5990ccd8fbf82648a4d60a969f38e68577b8fa227fbf7e3ecc1855952d7aa762"
+    },
+    {
+      "filename": "mn_mn/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mn_mn/audio/test.tar.gz",
+      "sha256": "95af5148c35103268f264d8a5fe57a29697bd02e9c04b9abbe377d01f24c4205"
+    },
+    {
+      "filename": "mn_mn/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mn_mn/audio/train.tar.gz",
+      "sha256": "b25f7b8f2e7832777d1dfac2f97bf63b6d704ad82cefadbe6e00056acb6fc42f"
+    },
+    {
+      "filename": "mn_mn/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mn_mn/dev.tsv"
+    },
+    {
+      "filename": "mn_mn/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mn_mn/test.tsv"
+    },
+    {
+      "filename": "mn_mn/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mn_mn/train.tsv"
+    },
+    {
+      "filename": "ms_my/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ms_my/audio/dev.tar.gz",
+      "sha256": "609ff21def5760f5a96af59ae652db31b10a53d6120432b7d8996783ef29c474"
+    },
+    {
+      "filename": "ms_my/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ms_my/audio/test.tar.gz",
+      "sha256": "4eefaa4ebbf010d9c1d5816356b7bb2bdae3b745de1b78e2e938a77f976ec914"
+    },
+    {
+      "filename": "ms_my/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ms_my/audio/train.tar.gz",
+      "sha256": "e489d03ad39c6e55c184eb1e8454134c91eeb48e4cecc41249f2dd9c2237dba9"
+    },
+    {
+      "filename": "ms_my/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ms_my/dev.tsv"
+    },
+    {
+      "filename": "ms_my/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ms_my/test.tsv"
+    },
+    {
+      "filename": "ms_my/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ms_my/train.tsv"
+    },
+    {
+      "filename": "mt_mt/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mt_mt/audio/dev.tar.gz",
+      "sha256": "14e6d30c0a2f92b063e9650e62104e6142281c60a2cfc929ddfd56d532f27abe"
+    },
+    {
+      "filename": "mt_mt/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mt_mt/audio/test.tar.gz",
+      "sha256": "de7e2cf282ee722d859c5c14561e3ce2f01f450c15a277cd822de15a2c3d0101"
+    },
+    {
+      "filename": "mt_mt/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mt_mt/audio/train.tar.gz",
+      "sha256": "0ec462bf6034e28f87343d7ddfecdf256fbef0e77c4b9e0ed82f2ebadf3721f2"
+    },
+    {
+      "filename": "mt_mt/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mt_mt/dev.tsv"
+    },
+    {
+      "filename": "mt_mt/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mt_mt/test.tsv"
+    },
+    {
+      "filename": "mt_mt/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/mt_mt/train.tsv"
+    },
+    {
+      "filename": "nb_no/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nb_no/audio/dev.tar.gz",
+      "sha256": "9e9d84da6f39eb79701cc086c0a3531bd171a266b09fc25b69f9ccd02c076bbb"
+    },
+    {
+      "filename": "nb_no/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nb_no/audio/test.tar.gz",
+      "sha256": "96fa705a6b30bc24548855f8dd1a2d722feb6bc78b9dfb2750dc075dc83a1ff4"
+    },
+    {
+      "filename": "nb_no/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nb_no/audio/train.tar.gz",
+      "sha256": "045e84d5f0fca36cb1e594556ee23590ef84491aa256d400f970898ac744a50f"
+    },
+    {
+      "filename": "nb_no/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nb_no/dev.tsv"
+    },
+    {
+      "filename": "nb_no/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nb_no/test.tsv"
+    },
+    {
+      "filename": "nb_no/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nb_no/train.tsv"
+    },
+    {
+      "filename": "nl_nl/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nl_nl/audio/dev.tar.gz",
+      "sha256": "a15ab529e0a320816c01fc162e3b7c34b746300db2638a83981f6063b83b9f00"
+    },
+    {
+      "filename": "nl_nl/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nl_nl/audio/test.tar.gz",
+      "sha256": "304a4b2f1db429bf8c586e94d0097ff3bc641f78150ae0de0b3a6f615919805a"
+    },
+    {
+      "filename": "nl_nl/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nl_nl/audio/train.tar.gz",
+      "sha256": "60fe2cfcf58516a34d7f0f337cd32f755aea43e15d918c0c0d2c06ff78e59b54"
+    },
+    {
+      "filename": "nl_nl/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nl_nl/dev.tsv"
+    },
+    {
+      "filename": "nl_nl/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nl_nl/test.tsv"
+    },
+    {
+      "filename": "nl_nl/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/nl_nl/train.tsv"
+    },
+    {
+      "filename": "om_et/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/om_et/audio/dev.tar.gz",
+      "sha256": "c2ba3a2b3ec526607b89641a1288264fcc57fb1ed94c33f3da0b52aa7672d0c9"
+    },
+    {
+      "filename": "om_et/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/om_et/audio/test.tar.gz",
+      "sha256": "b9bc799f0aa0181b6547cd6fd0a841dd1587c7f4b54f2190fc97fd1c305e8d4a"
+    },
+    {
+      "filename": "om_et/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/om_et/audio/train.tar.gz",
+      "sha256": "609112cb78f3075a511dbe9e5448c39c5a910a70d48085e8e6509eea64c9f8c9"
+    },
+    {
+      "filename": "om_et/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/om_et/dev.tsv"
+    },
+    {
+      "filename": "om_et/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/om_et/test.tsv"
+    },
+    {
+      "filename": "om_et/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/om_et/train.tsv"
+    },
+    {
+      "filename": "or_in/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/or_in/audio/dev.tar.gz",
+      "sha256": "f9bddd65e871d9f83ae08bc447aabc3e88f37099595ab19301c11b537993ca6b"
+    },
+    {
+      "filename": "or_in/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/or_in/audio/test.tar.gz",
+      "sha256": "c81ea9e2f522425d18e679b84a99600c447e9b9e3fbb45fa8808682fe3025ce0"
+    },
+    {
+      "filename": "or_in/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/or_in/audio/train.tar.gz",
+      "sha256": "558d4fecf72feb42ecd50d4bd718dfed78e165f4c09fb266845712b089674530"
+    },
+    {
+      "filename": "or_in/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/or_in/dev.tsv"
+    },
+    {
+      "filename": "or_in/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/or_in/test.tsv"
+    },
+    {
+      "filename": "or_in/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/or_in/train.tsv"
+    },
+    {
+      "filename": "pa_in/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pa_in/audio/dev.tar.gz",
+      "sha256": "18b3dc7a1ee1e57cae51769f7654813ed9333bf2b9bf09f182a88190f9436d2b"
+    },
+    {
+      "filename": "pa_in/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pa_in/audio/test.tar.gz",
+      "sha256": "64c437f9f46690e6d607b1d762412ba9aa63339fa0d56ef52ce6fc3c1f875031"
+    },
+    {
+      "filename": "pa_in/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pa_in/audio/train.tar.gz",
+      "sha256": "bba47f777c7382c7f44c8048bab0f6955eae1c9af64d1df761d6a6e05e34fa1f"
+    },
+    {
+      "filename": "pa_in/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pa_in/dev.tsv"
+    },
+    {
+      "filename": "pa_in/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pa_in/test.tsv"
+    },
+    {
+      "filename": "pa_in/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pa_in/train.tsv"
+    },
+    {
+      "filename": "pl_pl/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pl_pl/audio/dev.tar.gz",
+      "sha256": "f14102f21a1be72af158f5cd1165ebf5fc750e0bbb0e01844e35b21b2571832b"
+    },
+    {
+      "filename": "pl_pl/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pl_pl/audio/test.tar.gz",
+      "sha256": "dad5fa1600b6c283b57af9b4c80aa8ddf29ed79393bfb7e7221914224ab9b638"
+    },
+    {
+      "filename": "pl_pl/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pl_pl/audio/train.tar.gz",
+      "sha256": "98aa2cfca63f3eec1393b9437a67da1aea9b1e4794e39d8056ca4b4a7be421cd"
+    },
+    {
+      "filename": "pl_pl/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pl_pl/dev.tsv"
+    },
+    {
+      "filename": "pl_pl/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pl_pl/test.tsv"
+    },
+    {
+      "filename": "pl_pl/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/pl_pl/train.tsv"
+    },
+    {
+      "filename": "ps_af/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ps_af/audio/dev.tar.gz",
+      "sha256": "e6240c4ff264009d5a42f3a62dcfcf1c4da26f7569e0454646da489f5894d9ee"
+    },
+    {
+      "filename": "ps_af/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ps_af/audio/test.tar.gz",
+      "sha256": "153dc026a7790539d71aeead7933d0f092b318ade0f327cd4355b8de5473795e"
+    },
+    {
+      "filename": "ps_af/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ps_af/audio/train.tar.gz",
+      "sha256": "4976e75164fc467974d1e378b367b257118a851254b888dcc853dba77701c9ea"
+    },
+    {
+      "filename": "ps_af/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ps_af/dev.tsv"
+    },
+    {
+      "filename": "ps_af/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ps_af/test.tsv"
+    },
+    {
+      "filename": "ps_af/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ps_af/train.tsv"
+    },
+    {
+      "filename": "ro_ro/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ro_ro/audio/dev.tar.gz",
+      "sha256": "21c1f9c017f545b8fbcc895c914ffe795709511c8586c01f453aae791b8dffff"
+    },
+    {
+      "filename": "ro_ro/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ro_ro/audio/test.tar.gz",
+      "sha256": "00ab100aaa032bb0f1bd693df2c8ce2205e657b3338d7cc28a4c8a6ed7f0e896"
+    },
+    {
+      "filename": "ro_ro/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ro_ro/audio/train.tar.gz",
+      "sha256": "4d08e642079e44ab078f4a29d6f64d8300018752ee31fafabe59bba520cd9044"
+    },
+    {
+      "filename": "ro_ro/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ro_ro/dev.tsv"
+    },
+    {
+      "filename": "ro_ro/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ro_ro/test.tsv"
+    },
+    {
+      "filename": "ro_ro/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ro_ro/train.tsv"
+    },
+    {
+      "filename": "ru_ru/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ru_ru/audio/dev.tar.gz",
+      "sha256": "4dc533cd0f312f749bd6d0fe968f3183288d938e07ed97dc141d9f10570457f9"
+    },
+    {
+      "filename": "ru_ru/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ru_ru/audio/test.tar.gz",
+      "sha256": "8a0d6a0d23c3421f50c575bcf65d875cd19dadae2f7cabb415024f81b65178b1"
+    },
+    {
+      "filename": "ru_ru/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ru_ru/audio/train.tar.gz",
+      "sha256": "1966e34c17d612317f03916fb45159c793947de77e1988fe76b3b53cf6c40b44"
+    },
+    {
+      "filename": "ru_ru/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ru_ru/dev.tsv"
+    },
+    {
+      "filename": "ru_ru/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ru_ru/test.tsv"
+    },
+    {
+      "filename": "ru_ru/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ru_ru/train.tsv"
+    },
+    {
+      "filename": "sk_sk/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sk_sk/audio/dev.tar.gz",
+      "sha256": "6c6c448b29d992cef3cc5807dc477e8e952d9472c2b0077ab69427ef20d493ba"
+    },
+    {
+      "filename": "sk_sk/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sk_sk/audio/test.tar.gz",
+      "sha256": "25c24d53d789e7b18dabc01eabeb1f7e12ed6ee0e6329de5adf47cfe31d343d8"
+    },
+    {
+      "filename": "sk_sk/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sk_sk/audio/train.tar.gz",
+      "sha256": "4bfabe61a6f7224845338a93727aa3a5d3755869ed4075dc3723b3cfd57c684c"
+    },
+    {
+      "filename": "sk_sk/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sk_sk/dev.tsv"
+    },
+    {
+      "filename": "sk_sk/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sk_sk/test.tsv"
+    },
+    {
+      "filename": "sk_sk/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sk_sk/train.tsv"
+    },
+    {
+      "filename": "sl_si/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sl_si/audio/dev.tar.gz",
+      "sha256": "5a8a3800829a9668cb31ddedb9cb44cc935cec1e7155515ad21a6817adeeb431"
+    },
+    {
+      "filename": "sl_si/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sl_si/audio/test.tar.gz",
+      "sha256": "24f96a44036f3efcaaec7b5bb42101bec0b4a5d1eadc8fd3a3004c738b36c6fe"
+    },
+    {
+      "filename": "sl_si/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sl_si/audio/train.tar.gz",
+      "sha256": "9340e7741a83cd2ee71e768ebe247d16d68d9d1aa7378618e7a581c4be16959c"
+    },
+    {
+      "filename": "sl_si/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sl_si/dev.tsv"
+    },
+    {
+      "filename": "sl_si/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sl_si/test.tsv"
+    },
+    {
+      "filename": "sl_si/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sl_si/train.tsv"
+    },
+    {
+      "filename": "sr_rs/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sr_rs/audio/dev.tar.gz",
+      "sha256": "dbeaf9ad5c6684446eb567aca884b5f915ee54296810c2db53ad21e941cba5a9"
+    },
+    {
+      "filename": "sr_rs/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sr_rs/audio/test.tar.gz",
+      "sha256": "92f1bacea9fb20bc4065d8d18038fc27154d885a0c3ef89d3303f74c2e9ba694"
+    },
+    {
+      "filename": "sr_rs/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sr_rs/audio/train.tar.gz",
+      "sha256": "ee859c5a5505fe231b81fc9f7aa7c8ccfc41b116b3f500a1726c4853411dfce7"
+    },
+    {
+      "filename": "sr_rs/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sr_rs/dev.tsv"
+    },
+    {
+      "filename": "sr_rs/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sr_rs/test.tsv"
+    },
+    {
+      "filename": "sr_rs/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sr_rs/train.tsv"
+    },
+    {
+      "filename": "sv_se/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sv_se/audio/dev.tar.gz",
+      "sha256": "be0ef68902b1c5e332a71fd245b5bbaa828c8ebfc8a1174084132911eb6e09e0"
+    },
+    {
+      "filename": "sv_se/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sv_se/audio/test.tar.gz",
+      "sha256": "3792fd432675e16d85a67f5caf9927ad608aefc2484d738f26704f75584a5a6f"
+    },
+    {
+      "filename": "sv_se/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sv_se/audio/train.tar.gz",
+      "sha256": "04a18cb93720cfed1ed992abebe977ac3880cab17ec7cf9cb5afe77d439988d3"
+    },
+    {
+      "filename": "sv_se/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sv_se/dev.tsv"
+    },
+    {
+      "filename": "sv_se/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sv_se/test.tsv"
+    },
+    {
+      "filename": "sv_se/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/sv_se/train.tsv"
+    },
+    {
+      "filename": "ta_in/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ta_in/audio/dev.tar.gz",
+      "sha256": "63faa53c804949dae73c9a953927fb50d59540830261cff374588ba4c901f09e"
+    },
+    {
+      "filename": "ta_in/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ta_in/audio/test.tar.gz",
+      "sha256": "244344ef4ca6ee0d9a0a4815686ab633ec2e8d0b70dcb7f63d53033266b99d6e"
+    },
+    {
+      "filename": "ta_in/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ta_in/audio/train.tar.gz",
+      "sha256": "89ea516b1115d8cc7419ae5c44a35f356cb65fdd0480e3b799b1c02fdfdeab37"
+    },
+    {
+      "filename": "ta_in/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ta_in/dev.tsv"
+    },
+    {
+      "filename": "ta_in/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ta_in/test.tsv"
+    },
+    {
+      "filename": "ta_in/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ta_in/train.tsv"
+    },
+    {
+      "filename": "te_in/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/te_in/audio/dev.tar.gz",
+      "sha256": "2ac52fa35be22b05ad041e2a2a443d10f4ef59449db07fe42cd644eb81ed7123"
+    },
+    {
+      "filename": "te_in/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/te_in/audio/test.tar.gz",
+      "sha256": "65d764ab4c3e9531eb61ffea4d0a78832d520f238ef0f339a7871f19c1653fd8"
+    },
+    {
+      "filename": "te_in/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/te_in/audio/train.tar.gz",
+      "sha256": "6098b3d50ae7b49f9ddaac9b3f84aa7a36701ef196859a34b9b85cc9111a09f1"
+    },
+    {
+      "filename": "te_in/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/te_in/dev.tsv"
+    },
+    {
+      "filename": "te_in/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/te_in/test.tsv"
+    },
+    {
+      "filename": "te_in/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/te_in/train.tsv"
+    },
+    {
+      "filename": "tg_tj/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tg_tj/audio/dev.tar.gz",
+      "sha256": "c015c30ce44f7573201fd9005e192ca64a5ddc605249088845b9af1db4684be0"
+    },
+    {
+      "filename": "tg_tj/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tg_tj/audio/test.tar.gz",
+      "sha256": "2b100146aba5657d58ef1f8521a1ee092540c842469497f7b32b61925d072915"
+    },
+    {
+      "filename": "tg_tj/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tg_tj/audio/train.tar.gz",
+      "sha256": "3f23a041cdf9b249d10d1532a27be1cdf8bc024d279612272fe534b3f98bdb92"
+    },
+    {
+      "filename": "tg_tj/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tg_tj/dev.tsv"
+    },
+    {
+      "filename": "tg_tj/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tg_tj/test.tsv"
+    },
+    {
+      "filename": "tg_tj/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tg_tj/train.tsv"
+    },
+    {
+      "filename": "th_th/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/th_th/audio/dev.tar.gz",
+      "sha256": "505c9e40878df8690a4b20ecb8cd630aec7951259c51c007ac8df2fe78377685"
+    },
+    {
+      "filename": "th_th/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/th_th/audio/test.tar.gz",
+      "sha256": "a3c8bbfab5a124fb6b6475c238a9ec09957be5727aeacefe00eddbcf4bc0a82e"
+    },
+    {
+      "filename": "th_th/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/th_th/audio/train.tar.gz",
+      "sha256": "6235988c35d446462659168aa8695b52ae99f3024ba6c5534fd8b6df82521628"
+    },
+    {
+      "filename": "th_th/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/th_th/dev.tsv"
+    },
+    {
+      "filename": "th_th/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/th_th/test.tsv"
+    },
+    {
+      "filename": "th_th/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/th_th/train.tsv"
+    },
+    {
+      "filename": "tr_tr/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tr_tr/audio/dev.tar.gz",
+      "sha256": "7476fc01bc50750f2854dbc1b4fa285f00092808e7e43244e0b978e031cbe712"
+    },
+    {
+      "filename": "tr_tr/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tr_tr/audio/test.tar.gz",
+      "sha256": "a7db7a681e4460d2922626bf2037ddc1a9146efba27d78bfc9543250eabc3a09"
+    },
+    {
+      "filename": "tr_tr/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tr_tr/audio/train.tar.gz",
+      "sha256": "bb8f81d19282cab8068b915265f60147f84127d37c71ad920fd45409ba5072aa"
+    },
+    {
+      "filename": "tr_tr/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tr_tr/dev.tsv"
+    },
+    {
+      "filename": "tr_tr/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tr_tr/test.tsv"
+    },
+    {
+      "filename": "tr_tr/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/tr_tr/train.tsv"
+    },
+    {
+      "filename": "uk_ua/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uk_ua/audio/dev.tar.gz",
+      "sha256": "0f2b35ffe6277d53a19ce440a0195e86a34aaf94a2063c7f8d75b2afbe3f38da"
+    },
+    {
+      "filename": "uk_ua/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uk_ua/audio/test.tar.gz",
+      "sha256": "1c2a1bc5afafc576a68902f8dcc5f2c2313e454742674cfedc3a053be7418114"
+    },
+    {
+      "filename": "uk_ua/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uk_ua/audio/train.tar.gz",
+      "sha256": "06578dd3086a25403a2e50500f735b05b50368870a1f257963a430be0ed16955"
+    },
+    {
+      "filename": "uk_ua/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uk_ua/dev.tsv"
+    },
+    {
+      "filename": "uk_ua/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uk_ua/test.tsv"
+    },
+    {
+      "filename": "uk_ua/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uk_ua/train.tsv"
+    },
+    {
+      "filename": "ur_pk/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ur_pk/audio/dev.tar.gz",
+      "sha256": "ee0a7a18242a70ea9088e9618337e4835ce1972557bdc2cd3d500555ce89520f"
+    },
+    {
+      "filename": "ur_pk/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ur_pk/audio/test.tar.gz",
+      "sha256": "618840ad5fb21a59cc179ec535ddbc8e756e2fb40624689c6d59c93e019cd745"
+    },
+    {
+      "filename": "ur_pk/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ur_pk/audio/train.tar.gz",
+      "sha256": "00fbfdd4b98fa4c264b843355aa7450a3922642b73cb13e54ffa8950c4cdd93a"
+    },
+    {
+      "filename": "ur_pk/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ur_pk/dev.tsv"
+    },
+    {
+      "filename": "ur_pk/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ur_pk/test.tsv"
+    },
+    {
+      "filename": "ur_pk/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/ur_pk/train.tsv"
+    },
+    {
+      "filename": "uz_uz/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uz_uz/audio/dev.tar.gz",
+      "sha256": "46388b7c1f11d9ff21a38920c3417e92afe0a2d2bcfc378ab876794310a051c5"
+    },
+    {
+      "filename": "uz_uz/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uz_uz/audio/test.tar.gz",
+      "sha256": "1c9e47b37064c4a84bb901e18c79cdc35b6f481673f500bf58ace0145dec057a"
+    },
+    {
+      "filename": "uz_uz/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uz_uz/audio/train.tar.gz",
+      "sha256": "aeb37720254cc7fa884289d713735043812da504b9dc5ee8f14b1c5e6f9d8380"
+    },
+    {
+      "filename": "uz_uz/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uz_uz/dev.tsv"
+    },
+    {
+      "filename": "uz_uz/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uz_uz/test.tsv"
+    },
+    {
+      "filename": "uz_uz/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/uz_uz/train.tsv"
+    },
+    {
+      "filename": "vi_vn/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/vi_vn/audio/dev.tar.gz",
+      "sha256": "8821a394c99069409b3ce7bb5cd14b10b709f2ee2fea16f42b4701e1cc9ef673"
+    },
+    {
+      "filename": "vi_vn/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/vi_vn/audio/test.tar.gz",
+      "sha256": "b359261216ef14b8eea159abce794e270c2a0be903218cf1e1e8f7c7c1565b5c"
+    },
+    {
+      "filename": "vi_vn/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/vi_vn/audio/train.tar.gz",
+      "sha256": "016a568afc1909cfaf9efb1a2fc2f1d3311e646d9b52d05dc2e84ac0c17c34ce"
+    },
+    {
+      "filename": "vi_vn/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/vi_vn/dev.tsv"
+    },
+    {
+      "filename": "vi_vn/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/vi_vn/test.tsv"
+    },
+    {
+      "filename": "vi_vn/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/vi_vn/train.tsv"
+    },
+    {
+      "filename": "wo_sn/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/wo_sn/audio/dev.tar.gz",
+      "sha256": "a741e5e35bda46c55f1edb6a29c9a9c0a342bd33ad1adc69701e5294d24cf5bb"
+    },
+    {
+      "filename": "wo_sn/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/wo_sn/audio/test.tar.gz",
+      "sha256": "7ac7c6cf4c7013ce1509d77ef4c30590a070aa711364750a35279a36c9a998bc"
+    },
+    {
+      "filename": "wo_sn/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/wo_sn/audio/train.tar.gz",
+      "sha256": "5373b8dc661345ea184b2ea012ce4a7473ee585d3b15a7830d5d48d88845ed52"
+    },
+    {
+      "filename": "wo_sn/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/wo_sn/dev.tsv"
+    },
+    {
+      "filename": "wo_sn/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/wo_sn/test.tsv"
+    },
+    {
+      "filename": "wo_sn/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/wo_sn/train.tsv"
+    },
+    {
+      "filename": "yue_hant_hk/audio/dev.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/yue_hant_hk/audio/dev.tar.gz",
+      "sha256": "7d4cd3a51507fb6a6d214b4e8ad79d383a487d6f5c870f3142bfe37bf005f03d"
+    },
+    {
+      "filename": "yue_hant_hk/audio/test.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/yue_hant_hk/audio/test.tar.gz",
+      "sha256": "6b0b4c9c75d7bf27b5ac45ad3d86016e0f5a6a0d0d40516df3f6ad2c3febe940"
+    },
+    {
+      "filename": "yue_hant_hk/audio/train.tar.gz",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/yue_hant_hk/audio/train.tar.gz",
+      "sha256": "fc149199b47698cb0aa6ed6154f069560fb1a06cc0a2a220cfcfd3c8d7574f9c"
+    },
+    {
+      "filename": "yue_hant_hk/dev.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/yue_hant_hk/dev.tsv"
+    },
+    {
+      "filename": "yue_hant_hk/test.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/yue_hant_hk/test.tsv"
+    },
+    {
+      "filename": "yue_hant_hk/train.tsv",
+      "url": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/yue_hant_hk/train.tsv"
+    }
+  ]
+}

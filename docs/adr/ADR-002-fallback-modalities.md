@@ -29,7 +29,12 @@ ADR-001 selects “Transforming LLMs into Cross-modal and Cross-lingual Retrieva
 - **Evaluation**: Metrics shift toward audio-caption retrieval benchmarks (R@K, mAP) in addition to cross-lingual metrics.
 - **Documentation**: Roadmap and backlog require updates; ADR-001 remains baseline but references ADR-002 for contingency.
 
-- ## Follow-up Actions
+## 2025-09-21 Legal Update
+- Compliance meeting (2025-09-20) reaffirmed that NC/SA datasets remain internal-only but permissible for Phase 3 workflows; no additional restrictions introduced.
+- Director captured fallback triggers in `docs/notes/planning/program-roadmap.md` and sprint backlog item now closed with this ADR reference.
+- Status remains “Accepted”; revisit during the 2025-10-04 readiness review to confirm whether fallback activation is required.
+
+## Follow-up Actions
 - Monitor PaLM checkpoint availability; raise change request if access still blocked by Phase 4 planning review (2025-10-15 target).
 - Prototype minimal SpeechCLIP training on AudioCaps once ingestion pipeline exists to estimate compute requirements (blocked on ingest sample run completion).
 - Coordinate with Director to add conditional milestones in program roadmap and sprint backlog if fallback activated.

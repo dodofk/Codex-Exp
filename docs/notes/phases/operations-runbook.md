@@ -16,6 +16,25 @@ Provide on-call guidance for ingestion and preprocessing jobs during Phase 3. Up
 4. Verify credentials in `.env.ingestion` have not expired (check rotation dates below).
 5. Ensure local environment synced via `uv sync --frozen` before running Make/CLI commands; prefer `uv run …` wrappers for all Python entry points.
 
+## Prefect & Redis Provisioning Checklist
+1. Ensure Docker Desktop (or equivalent) is running; Redis spins up as a container (`auto-paper-redis`).
+2. Export `PREFECT_API_URL=http://127.0.0.1:4200/api` (or target control-plane URL) for all following commands.
+3. Start local infra via `./scripts/dev_infra.sh`—this launches Redis and a Prefect server with logs at `/tmp/prefect-server.log`.
+4. Deploy flows with `make queue-prefect-deploy`; this creates the `ingestion` work pool and registers `auto-paper-ingest-preprocess/prod` against `scripts/prefect_flows.py`.
+5. Start a worker in a new terminal: `uv run prefect worker start --pool ingestion` (Ctrl+C when shutting down).
+6. Kick off a smoke run: `uv run prefect deployment run auto-paper-ingest-preprocess/prod --params '{"dataset":"fleurs","config_path":"config/ingestion/fleurs_smoke.json","preprocess_config":"config/preprocess/fleurs.json"}'` to stay under ~3 GiB. Switch the `config_path` to the full `fleurs_dev.json` (or similar) once storage and bandwidth are cleared.
+7. Cancel the run after verifying telemetry wiring if you only need a connectivity check (`uv run prefect flow-run cancel <run-id>`).
+8. Tear down when finished: `pkill -f "prefect worker start --pool ingestion"`, `pkill -f "prefect server start"`, and `docker stop auto-paper-redis`.
+
+> Note: Prefect/Redis CLIs are provided through the project environment (`uv sync` installs `prefect` and `redis` from `pyproject.toml`). Update `docs/notes/planning/sprint-backlog.md` if provisioning exposes new blockers (e.g., cloud endpoint access, quota issues).
+
+## Phase 4 Ops Appendix – Model Training
+- **Resource Planning**: Default to macOS CPU. Limit `model-train` jobs to ≤16 threads (`export OMP_NUM_THREADS=16`). For overnight runs, coordinate with Ops for remote executor scheduling.
+- **Environment Setup**: Install optional extras via `uv pip install .[model-cpu]` after proposal approval. Confirm `torch` and `torchaudio` CPU wheels.
+- **Telemetry**: Training CLI emits metrics via JSONL (planned `data/metrics/<run-id>.jsonl`). Hook into existing telemetry aggregator once implemented.
+- **Log Retention**: Store training logs under `data/logs/model/<run-id>/`. Retain at least two sprint cycles for regression comparison.
+- **Incident Response**: Failures in `model-train` smoke jobs must be recorded in sprint backlog daily updates; escalate to MLOps if CPU thrash observed.
+
 ## Incident Playbooks
 - **Download failure / checksum mismatch**
   1. Inspect `data/raw/<dataset>/logs/events.jsonl` for error event.

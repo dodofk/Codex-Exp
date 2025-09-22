@@ -1,0 +1,4 @@
+# Legacy snapshot of core dependencies.
+# Prefer `uv sync` (pyproject/uv.lock) for project installs; this file remains for reference only.
+datasets>=2.19.0
+pytest>=8.4.0

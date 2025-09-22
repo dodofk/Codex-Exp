@@ -1,0 +1,15 @@
+{
+  "dataset": "covost2_en_fr",
+  "input_dir": "data/raw/covost2/en_fr_subset",
+  "output_dir": "data/processed/covost2/en_fr_subset",
+  "sample_rate": 16000,
+  "steps": [
+    {"name": "trim_silence", "params": {"threshold_db": -30}},
+    {"name": "resample", "params": {"rate": 16000}},
+    {"name": "normalize_volume", "params": {"target_dbfs": -18}},
+    {
+      "name": "extract_features",
+      "params": {"type": "log_mel", "frame_length": 25, "frame_shift": 10, "n_mels": 64}
+    }
+  ]
+}

@@ -17,13 +17,19 @@
 - HF loader entry-point: `python -m ingestion.hf_loader --dataset ... --output ...`
 - Make helpers: `make data-plan DATASET=<dataset>`, `make data-download DATASET=<dataset>`, `make worker-run DATASET=<dataset> ARGS="--artifact ..."`, `make hf-download HF_ARGS="..."`
 - Config loader: `src/ingestion/config.py` (JSON/YAML with artifact specs)
-- Example configs: `config/ingestion/fleurs.json`, `covost2.json`, `mustc.json`, `voxpopuli.json`, `wikimatrix.json`
-- Unit tests: `tests/ingestion/test_cli.py`
+- Example configs: `config/ingestion/fleurs.json`, `fleurs_smoke.json`, `covost2.json`, `mustc.json`, `voxpopuli.json`, `wikimatrix.json`
+- Unit tests: `tests/ingestion/test_cli.py`, `tests/ingestion/test_tasks.py`, `tests/ingestion/test_worker.py`
 - Telemetry: JSONL appended to `data/raw/<dataset>/logs/events.jsonl`
 - Environment file: `.env.ingestion` (see `.env.ingestion.example`) loaded automatically by the CLI for credentials/headers.
-- Sample run transcript: `.code/agents/ingestion_engineer/2025-09-19-fleurs-dev-run.md`.
+- Sample run transcripts: `.code/agents/ingestion_engineer/2025-09-19-fleurs-dev-run.md`, `.code/agents/ingestion_engineer/2025-09-21-fleurs-smoke-run.md`.
 - Optional OpenTelemetry exporter: set `OTEL_EXPORTER_CONSOLE=1` to mirror events to stdout for scraping.
 - Compliance gate: configs provide `"distribution": "public|internal|restricted"`. Worker refuses to run non-public datasets unless metadata is updated per compliance policy.
+
+### FLEURS Smoke Profile (<3 GiB)
+- Config: `config/ingestion/fleurs_smoke.json` targeting `am_et`, `af_za`, `ast_es` dev/test artifacts only.
+- Run via Prefect: `uv run prefect deployment run auto-paper-ingest-preprocess/prod --params '{"dataset":"fleurs","config_path":"config/ingestion/fleurs_smoke.json","preprocess_config":"config/preprocess/fleurs.json"}'` (requires worker in `ingestion` pool).
+- Expected output: `data/raw/fleurs/smoke/` (~1.3 GiB) plus telemetry entries in `data/raw/fleurs/logs/{events,telemetry}.jsonl` with `version: smoke`.
+- Use transcript `.code/agents/ingestion_engineer/2025-09-21-fleurs-smoke-run.md` for full command history and Prefect flow-run ID `1aa0d269-ad4e-4fe3-a6d1-b2dc76c17eef`.
 
 ## Credentials & Environment
 - **MuST-C v2 (`MUSTC_TOKEN`)** — Required FBK bearer token for protected tarballs.
