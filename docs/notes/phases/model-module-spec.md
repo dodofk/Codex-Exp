@@ -84,8 +84,8 @@ All towers/head implementations should inherit from lightweight `Configurable` m
 ## Deliverables for Sprint-0
 1. `src/model/interfaces.py` populated with Protocols/dataclasses reflecting the table above. ✅
 2. `src/model/configs.py` delivering `TrainingConfig` loader, with baseline config under `config/model/baseline.yaml`. ✅
-3. Training loop + CLI scaffolding (`src/model/trainer.py`, `src/model/cli.py`) ✅ (awaiting integration with concrete components).
-4. Checklist for dependencies + Make targets (covered by separate backlog items).
+3. Training loop + CLI scaffolding (`src/model/trainer.py`, `src/model/cli.py`) ✅
+4. Tower registries + baseline implementations (`identity`, `phi2_lora`, `distil_whisper`). ✅
 
 ## Open Questions
 - Final choice of text tower baseline (Phi-2 vs. Mistral-q4). Decision pending benchmark on macOS hardware.

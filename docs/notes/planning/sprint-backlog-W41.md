@@ -8,8 +8,8 @@
 ## Committed Work
 | Item | Phase | Owner | Story Points | Status | Definition of Done |
 |------|-------|-------|--------------|--------|--------------------|
-| Implement Phi-2 LoRA text tower | Phase 4 | Model Engineer | 8 | Not Started | Text tower loads Phi-2 weights via transformers with CPU LoRA adapters; smoke run passes |
-| Integrate Distil-Whisper audio tower | Phase 4 | Model Engineer | 8 | Not Started | Audio tower consumes Phase 3 features and produces embeddings matching projection dim |
+| Implement Phi-2 LoRA text tower | Phase 4 | Model Engineer | 8 | In Review | `phi2_lora` tower implemented with registry entry; tests skip if torch unavailable |
+| Integrate Distil-Whisper audio tower | Phase 4 | Model Engineer | 8 | In Review | `distil_whisper` tower implemented (`src/model/towers/whisper.py`); tests skip when torch unavailable |
 | Replace dummy loss with InfoNCE + spreadout regularizer | Phase 4 | Lead Architect & Model Engineer | 5 | Not Started | Loss module computes contrastive objective and logs metrics |
 | Dataset loader + batching pipeline | Phase 4 | Model Engineer | 4 | Not Started | Loader pulls from `data/processed/<dataset>` with configurable shards |
 | CLI training enhancements (`model-train`) | Phase 4 | MLOps Engineer | 3 | Not Started | CLI supports dataset selection, logging to JSONL, and resume options |

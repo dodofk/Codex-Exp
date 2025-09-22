@@ -16,8 +16,7 @@ from .registries import get_audio_tower, get_text_tower
 from .trainer import Trainer
 
 # Import tower modules for side-effect registration
-from .towers import audio as _audio_towers  # noqa: F401
-from .towers import text as _text_towers  # noqa: F401
+from . import towers  # noqa: F401
 
 
 def build_parser() -> argparse.ArgumentParser:

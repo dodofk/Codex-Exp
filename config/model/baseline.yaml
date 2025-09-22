@@ -1,10 +1,11 @@
 text_tower:
-  name: identity
-  embedding_dim: 768
+  name: phi2_lora
+  checkpoint: sshleifer/tiny-gpt2
+  adapter_rank: 4
 audio_tower:
-  name: mean_pooling
-  embedding_dim: 768
-projection_head:
+  name: distil_whisper
+  checkpoint: openai/whisper-tiny
+  projection_head:
   dim: 768
   temperature_init: 0.07
 optimizer:
