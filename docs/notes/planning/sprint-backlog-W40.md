@@ -10,15 +10,15 @@
 |------|-------|-------|--------------|--------|--------------------|
 | Author model module interface spec (`src/model/`) | Phase 4 | Lead Architect | 5 | Complete | Spec + interfaces published; includes `ModelConfig`, tower/heads, loss hooks ready for implementation |
 | Encoder fallback memo (PaLM vs CPU baseline) | Phase 4 | Lead Architect | 3 | Complete | Memo recorded in `docs/notes/planning/phase-4-log.md` outlining Phi-2 LoRA vs Mistral-q4 fallback |
-| Scaffold training loop + config loader | Phase 4 | Model Engineer | 6 | In Progress | Config loader landed; trainer scaffold (`src/model/trainer.py`) and CLI (`src/model/cli.py`) added; awaiting integration with components |
+| Scaffold training loop + config loader | Phase 4 | Model Engineer | 6 | Complete | Config loader + trainer + CLI landed with smoke tests |
 | Design text/audio tower skeletons and registries | Phase 4 | Lead Architect & Model Engineer | 6 | Complete | Registries plus identity text + mean pooling audio towers added with tests |
 | Implement placeholder loss computer and integrate with trainer | Phase 4 | Model Engineer | 4 | Complete | Dummy contrastive loss + numpy-based trainer execute over smoke batches |
 | Update CLI to instantiate components using baseline config | Phase 4 | Model Engineer | 3 | Complete | CLI loads baseline config, instantiates towers/loss, runs smoke training (see `tests/model/test_cli.py`) |
-| Add model config validation tests | Phase 4 | Model Engineer | 3 | Not Started | `tests/model/test_config.py` covers schema round-trip and default overrides |
+| Add model config validation tests | Phase 4 | Model Engineer | 3 | Complete | `tests/model/test_config.py` and CLI smoke test committed |
 | Dependency & tooling proposal (`pyproject`, Make targets) | Phase 4 | MLOps Engineer | 4 | Complete | Proposal documented in `docs/notes/planning/phase-4-dependency-proposal.md`; torch CPU install instructions validated |
 | Phase 4 ops appendix (CPU scheduling/log retention) | Phase 4 | MLOps Engineer | 2 | Complete | Section added to `docs/notes/phases/operations-runbook.md` covering CPU limits, telemetry, and incident handling |
 | Define metric regression thresholds + smoke eval script | Phase 4 | QA Lead | 3 | Complete | `scripts/model_eval.py` + `docs/notes/planning/phase-4-qa-summary.md` capture smoke thresholds & follow-up actions |
-| Compliance review for embeddings/checkpoints | Phase 4 | Compliance Steward | 2 | In Review | Compliance readiness report updated (2025-09-21) with guidance on embedding/checkpoint distribution |
+| Compliance review for embeddings/checkpoints | Phase 4 | Compliance Steward | 2 | Complete | Compliance readiness report updated (2025-09-21) with guidance on embedding/checkpoint distribution |
 
 ## Supporting Tasks
 - Prepare kickoff deck/notes (`docs/notes/planning/phase-4-kickoff.md`).

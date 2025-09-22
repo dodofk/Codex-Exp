@@ -23,3 +23,4 @@
 - Finalize attribution block for approved datasets (use cheat sheet template).
 - Coordinate with Data Scout to ensure manifest reflects compliance statuses.
 - Archive legal meeting transcript in `.code/agents/compliance_steward/`.
+- Evaluate model checkpoint / embedding distribution (2025-09-21 update): embeddings generated during Phase 4 remain internal-only unless licenses permit redistribution (MuST-C NC/ND, VoxPopuli SA). Document restrictions in model release checklist.
