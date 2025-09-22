@@ -11,9 +11,10 @@ import numpy as np
 from .configs import TrainingConfig
 from .heads import LinearProjectionHead
 from .interfaces import RetrievalComponents
-from .losses import DummyContrastiveLoss
+from .losses import InfoNCELoss
 from .registries import get_audio_tower, get_text_tower
 from .trainer import Trainer
+from .metrics import evaluate_smoke_run
 
 # Import tower modules for side-effect registration
 from . import towers  # noqa: F401
@@ -63,7 +64,7 @@ def main(argv: list[str] | None = None) -> int:
     text_tower = get_text_tower(text_cfg.get("name", "identity"), text_cfg)
     audio_tower = get_audio_tower(audio_cfg.get("name", "mean_pooling"), audio_cfg)
     head = LinearProjectionHead.from_config(head_cfg)
-    loss = DummyContrastiveLoss()
+    loss = InfoNCELoss()
 
     components = RetrievalComponents(
         text_tower=text_tower,
@@ -83,8 +84,18 @@ def main(argv: list[str] | None = None) -> int:
     ]
 
     metrics = trainer.train_epoch(batches)
+
+    # compute evaluation metrics on the same smoke batch
+    text_emb = components.text_tower.embed_text(batches[0])
+    audio_emb = components.audio_tower.embed_audio(batches[0])
+    text_proj = components.projection_head.project_text(text_emb)
+    audio_proj = components.projection_head.project_audio(audio_emb)
+    similarity = np.matmul(np.asarray(text_proj), np.asarray(audio_proj).T)
+    eval_report = evaluate_smoke_run(similarity)
+
     print(f"Mode: {args.mode}")
-    print(f"Metrics: {metrics}")
+    print(f"Training metrics: {metrics}")
+    print(f"Evaluation metrics: {eval_report.values}")
     return 0
 
 

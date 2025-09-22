@@ -7,12 +7,12 @@ from typing import Dict
 
 import numpy as np
 
-
-DEFAULT_THRESHOLDS = {
-    "recall_at_1": 0.10,
-    "mrr": 0.20,
-    "bleu": 5.0,
-}
+from model.metrics import (
+    DEFAULT_THRESHOLDS,
+    compute_mrr,
+    compute_recall_at_1,
+    evaluate_smoke_run as core_evaluate_smoke_run,
+)
 
 
 @dataclass
@@ -23,17 +23,5 @@ class MetricReport:
         return all(self.values.get(metric, 0.0) >= threshold for metric, threshold in thresholds.items())
 
 
-def compute_recall_at_1(similarity_matrix: np.ndarray) -> float:
-    correct = np.argmax(similarity_matrix, axis=1)
-    hits = (correct == np.arange(similarity_matrix.shape[0])).mean()
-    return float(hits)
-
-
 def evaluate_smoke_run(similarity_matrix: np.ndarray) -> MetricReport:
-    return MetricReport(
-        values={
-            "recall_at_1": compute_recall_at_1(similarity_matrix),
-            "mrr": 0.0,  # TODO: implement
-            "bleu": 0.0,  # TODO: integrate text metrics
-        }
-    )
+    return MetricReport(values=core_evaluate_smoke_run(similarity_matrix))

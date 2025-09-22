@@ -11,12 +11,7 @@ except ImportError:  # pragma: no cover - allow import without torch
 
 import numpy as np
 
-from .interfaces import (
-    Batch,
-    LossComputer,
-    RetrievalComponents,
-    TrainerHooks,
-)
+from .interfaces import Batch, LossComputer, RetrievalComponents, TrainerHooks
 
 
 class Trainer:
@@ -53,14 +48,10 @@ class Trainer:
 
             text_proj = self.components.projection_head.project_text(text_emb)
             audio_proj = self.components.projection_head.project_audio(audio_emb)
-            similarity = np.matmul(np.asarray(text_proj), np.asarray(audio_proj).T)
+            text_np = self._to_numpy(text_proj)
+            audio_np = self._to_numpy(audio_proj)
 
-            loss_dict = self.loss(
-                text_proj,
-                audio_proj,
-                similarity,
-                batch,
-            )
+            loss_dict = self.loss(text_np, audio_np, batch)
 
             if optimizer is not None and torch is not None:
                 optimizer.zero_grad()
@@ -78,6 +69,14 @@ class Trainer:
             self.hooks.on_epoch_end(0, metrics)
 
         return metrics
+
+    @staticmethod
+    def _to_numpy(tensor: Tensor) -> np.ndarray:
+        if isinstance(tensor, np.ndarray):
+            return tensor
+        if torch is not None and isinstance(tensor, torch.Tensor):  # pragma: no branch
+            return tensor.detach().cpu().numpy()
+        return np.asarray(tensor)
 
 
 __all__ = ["Trainer"]
