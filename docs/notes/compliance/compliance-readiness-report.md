@@ -24,3 +24,8 @@
 - Coordinate with Data Scout to ensure manifest reflects compliance statuses.
 - Archive legal meeting transcript in `.code/agents/compliance_steward/`.
 - Evaluate model checkpoint / embedding distribution (2025-09-21 update): embeddings generated during Phase 4 remain internal-only unless licenses permit redistribution (MuST-C NC/ND, VoxPopuli SA). Document restrictions in model release checklist.
+
+## Model Artifact Policy (2025-09-23)
+- LoRA adapter weights derived from licensed datasets **must remain internal-only** until legal confirms redistribution scope. Store checkpoints under `artifacts/model/internal/` with access limited to project members.
+- Quantized or distilled checkpoints inherit upstream dataset licenses. Apply NC/ND and SA clauses when preparing evaluation bundles; any external release requires Compliance Steward sign-off.
+- Track exported checkpoints in the release checklist and include attribution/license strings in accompanying README files.

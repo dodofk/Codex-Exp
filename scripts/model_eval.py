@@ -23,5 +23,9 @@ class MetricReport:
         return all(self.values.get(metric, 0.0) >= threshold for metric, threshold in thresholds.items())
 
 
-def evaluate_smoke_run(similarity_matrix: np.ndarray) -> MetricReport:
-    return MetricReport(values=core_evaluate_smoke_run(similarity_matrix))
+def evaluate_smoke_run(
+    similarity_matrix: np.ndarray,
+    predictions: list[str] | None = None,
+    references: list[str] | None = None,
+) -> MetricReport:
+    return MetricReport(values=core_evaluate_smoke_run(similarity_matrix, predictions, references))

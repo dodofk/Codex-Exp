@@ -4,8 +4,12 @@
   "output_dir": "data/processed/fleurs/v1",
   "sample_rate": 16000,
   "steps": [
-    {"name": "resample", "params": {"rates": [16000]}},
+    {"name": "trim_silence", "params": {"threshold_db": -35}},
+    {"name": "resample", "params": {"rate": 16000}},
     {"name": "normalize_volume", "params": {"target_dbfs": -20}},
-    {"name": "extract_features", "params": {"type": "log_mel", "frame_length": 25}}
+    {
+      "name": "extract_features",
+      "params": {"type": "log_mel", "frame_length": 25, "frame_shift": 10, "n_mels": 80}
+    }
   ]
 }

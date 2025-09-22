@@ -31,7 +31,7 @@ Provide on-call guidance for ingestion and preprocessing jobs during Phase 3. Up
 ## Phase 4 Ops Appendix – Model Training
 - **Resource Planning**: Default to macOS CPU. Limit `model-train` jobs to ≤16 threads (`export OMP_NUM_THREADS=16`). For overnight runs, coordinate with Ops for remote executor scheduling.
 - **Environment Setup**: Install optional extras via `uv pip install .[model-cpu]` after proposal approval. Confirm `torch` and `torchaudio` CPU wheels.
-- **Telemetry**: Training CLI emits metrics via JSONL (planned `data/metrics/<run-id>.jsonl`). Hook into existing telemetry aggregator once implemented.
+- **Telemetry**: Training CLI emits metrics to `data/logs/model/<run-id>/metrics.jsonl` (defaults to timestamp-based `run-id`). Per-epoch and eval events mirror to `telemetry.jsonl`. Summaries live under `data/telemetry/model_summary.json`; refresh with `make telemetry-model-summary` (wrapper around `scripts/model_telemetry_summary.py`).
 - **Log Retention**: Store training logs under `data/logs/model/<run-id>/`. Retain at least two sprint cycles for regression comparison.
 - **Incident Response**: Failures in `model-train` smoke jobs must be recorded in sprint backlog daily updates; escalate to MLOps if CPU thrash observed.
 

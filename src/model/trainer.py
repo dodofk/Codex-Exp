@@ -48,19 +48,28 @@ class Trainer:
 
             text_proj = self.components.projection_head.project_text(text_emb)
             audio_proj = self.components.projection_head.project_audio(audio_emb)
-            text_np = self._to_numpy(text_proj)
-            audio_np = self._to_numpy(audio_proj)
 
-            loss_dict = self.loss(text_np, audio_np, batch)
+            loss_dict = self.loss(text_proj, audio_proj, batch)
 
             if optimizer is not None and torch is not None:
                 optimizer.zero_grad()
                 loss_value = loss_dict.get("loss")
                 if loss_value is not None:
-                    loss_value.backward()  # pragma: no cover - requires torch
+                    if isinstance(loss_value, torch.Tensor):
+                        loss_value.backward()  # pragma: no cover - requires torch
+                    else:  # pragma: no cover - defensive
+                        torch.tensor(loss_value, requires_grad=True).backward()
                     optimizer.step()
 
-            metrics.update({k: float(v) for k, v in loss_dict.items() if k != "loss"})
+            for key, value in loss_dict.items():
+                if key == "loss":
+                    continue
+                if isinstance(value, np.ndarray):
+                    metrics[key] = float(value.mean())
+                elif torch is not None and isinstance(value, torch.Tensor):
+                    metrics[key] = float(value.detach().cpu().item())
+                else:
+                    metrics[key] = float(value)
 
             if self.hooks is not None:
                 self.hooks.on_batch_end(step, loss_dict)
@@ -69,14 +78,5 @@ class Trainer:
             self.hooks.on_epoch_end(0, metrics)
 
         return metrics
-
-    @staticmethod
-    def _to_numpy(tensor: Tensor) -> np.ndarray:
-        if isinstance(tensor, np.ndarray):
-            return tensor
-        if torch is not None and isinstance(tensor, torch.Tensor):  # pragma: no branch
-            return tensor.detach().cpu().numpy()
-        return np.asarray(tensor)
-
 
 __all__ = ["Trainer"]

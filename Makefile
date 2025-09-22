@@ -69,3 +69,8 @@ enqueue-demo:
 
 hf-download:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m ingestion.hf_loader $(HF_ARGS)
+
+.PHONY: telemetry-model-summary
+
+telemetry-model-summary:
+	uv run python scripts/model_telemetry_summary.py --log-dir data/logs/model --output data/telemetry/model_summary.json

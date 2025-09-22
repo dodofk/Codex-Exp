@@ -38,13 +38,17 @@ def _load_raw_config(path: Path) -> Mapping[str, Any]:
 if BaseModel is not None:  # pragma: no branch
     from pydantic import ValidationError
 
+    from pydantic import ConfigDict
+
     class _ModelConfigModel(BaseModel):
+        model_config = ConfigDict(extra="allow")
         text_tower: Mapping[str, Any]
         audio_tower: Mapping[str, Any]
         projection_head: Mapping[str, Any]
         optimizer: Mapping[str, Any]
         training: Mapping[str, Any]
         evaluation: Mapping[str, Any]
+        dataset: Optional[Mapping[str, Any]] = None
 
 
     class TrainingConfig(ModelConfig):
@@ -76,6 +80,7 @@ else:
         optimizer: Mapping[str, Any]
         training: Mapping[str, Any]
         evaluation: Mapping[str, Any]
+        dataset: Optional[Mapping[str, Any]] = None
 
     class TrainingConfig(ModelConfig):
         """Fallback dataclass-backed config when Pydantic is unavailable."""
@@ -99,6 +104,7 @@ else:
                 optimizer=payload["optimizer"],
                 training=payload["training"],
                 evaluation=payload["evaluation"],
+                dataset=payload.get("dataset"),
             )
 
         @classmethod

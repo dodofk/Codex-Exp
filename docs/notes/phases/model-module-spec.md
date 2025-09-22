@@ -46,11 +46,10 @@ All towers/head implementations should inherit from lightweight `Configurable` m
 - YAML schema stored under `config/model/`. Example keys:
   ```yaml
   text_tower:
-    name: phi2_lora
-    checkpoint: local://models/phi2-2.7b
-    adapters:
-      lora_rank: 16
-      target_modules: ["q_proj", "v_proj"]
+    name: qwen3
+    checkpoint: hf://Qwen/Qwen3-0.6B
+    enable_lora: false
+    max_length: 256
   audio_tower:
     name: distil_whisper
     checkpoint: hf://distil-whisper-small.en
@@ -66,10 +65,16 @@ All towers/head implementations should inherit from lightweight `Configurable` m
     batch_size: 16
     max_tokens_per_batch: 4096
     gradient_checkpointing: true
+  dataset:
+    root: data/processed/fleurs/smoke
+    manifest_glob: "manifest/train*.jsonl"
+    batch_size: 16
+    shuffle: true
+    seed: 13
   evaluation:
     metrics: [recall_at_1, mrr, bleu]
   ```
-- Config loader (`TrainingConfig` in `src/model/configs.py`) should support environment-variable overrides and CLI `--config-overrides key=value` arguments for quick ablations *(CLI support to be implemented alongside the trainer entrypoint).* 
+- Config loader (`TrainingConfig` in `src/model/configs.py`) now supports overrides; CLI exposes `--override` along with dataset flags (`--dataset-root`, `--dataset-manifest-glob`, etc.), JSONL logging, and resume controls for ablation workflows.
 
 ## Data Contracts
 - Audio tower consumes `.npy` feature tensors produced by Phase 3 (see `docs/notes/phases/preprocess-spec.md`).
@@ -78,17 +83,21 @@ All towers/head implementations should inherit from lightweight `Configurable` m
 
 ## Evaluation & Telemetry Hooks
 - Reuse `telemetry` package for logging loss curves, throughput, and metric values.
-- Provide adapters to emit structured logs to JSONL (`data/metrics/<run-id>.jsonl`) for QA smoke comparison.
+- Provide adapters to emit structured logs to JSONL (`data/logs/model/<run-id>/metrics.jsonl`) for QA smoke comparison.
+- Summaries of BLEU/recall metrics aggregated via `scripts/model_telemetry_summary.py` (writes `data/telemetry/model_summary.json`).
 - Ensure evaluation entry points can run on small shards (e.g., `fleurs_smoke`) within <10 minutes on CPU.
+- CLI evaluation writes JSONL records (train + `eval_complete`) including recall@1, MRR, and corpus BLEU computed via SacreBLEU.
 
 ## Deliverables for Sprint-0
 1. `src/model/interfaces.py` populated with Protocols/dataclasses reflecting the table above. ✅
 2. `src/model/configs.py` delivering `TrainingConfig` loader, with baseline config under `config/model/baseline.yaml`. ✅
 3. Training loop + CLI scaffolding (`src/model/trainer.py`, `src/model/cli.py`) ✅
-4. Tower registries + baseline implementations (`identity`, `phi2_lora`, `distil_whisper`). ✅
+4. Tower registries + baseline implementations (`identity`, `qwen3`, `phi2_lora`, `distil_whisper`). ✅
+5. Dataset loader reading manifest shards from `data/processed/<dataset>` with batching + padding logic. ✅
+6. CLI (`model.cli`) supports dataset overrides, JSONL logging, and resume workflow for multi-epoch runs. ✅
 
 ## Open Questions
-- Final choice of text tower baseline (Phi-2 vs. Mistral-q4). Decision pending benchmark on macOS hardware.
+- Final choice of text tower baseline (Qwen3 vs. larger Phi-2/PaLM derivatives). Decision pending benchmark on macOS hardware.
 - Location for experiment manifests (`docs/notes/phases/phase-4-log.md` vs. dedicated `experiments/` directory).
 - Whether to adopt Hydra vs. straight YAML + Pydantic for configuration composition.
 

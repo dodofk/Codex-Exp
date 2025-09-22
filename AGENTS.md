@@ -10,6 +10,19 @@ Rely on Make targets for repeatable workflows:
 - `make test` executes the full automated suite; run it before every commit or pull request.
 Document any additional scripts inside `docs/notes/planning/` so the Director agent can schedule them in the roadmap.
 
+## Continuous Integration (CI)
+- CI runs from `.github/workflows/ci.yml` on every push to `main` and for all pull requests into `main`; merges require a green run.
+- Workflow steps: checkout, install `uv` (Python 3.11) with caching, `uv sync --frozen`, `uv run --frozen make data-plan DATASET=fleurs`, `uv run --frozen make preprocess-plan DATASET=fleurs`, and `uv run --frozen pytest`.
+- Extend CI by editing the same workflow plus any supporting Make targets; keep checks deterministic, freeze-aware, and under ~15 minutes wall time.
+- When CI fails, reproduce locally with the listed `uv run --frozen …` commands and document multi-commit fixes or lingering issues in the sprint backlog.
+
+## Development Workflow
+- Start from a feature branch, run `make init` once per machine, then keep dependencies synced via `uv sync --frozen` (avoid direct `pip`).
+- Use Make targets or `uv run` wrappers so local runs mirror CI (e.g., `uv run make data-plan DATASET=<dataset>` and `uv run make preprocess-plan DATASET=<dataset>` when touching ingestion/preprocess code).
+- Before pushing: execute `make lint`, `make test`, and the CI smoke flow (`uv run --frozen make data-plan DATASET=fleurs` plus `uv run --frozen make preprocess-plan DATASET=fleurs`).
+- Record process/tooling updates in `docs/notes/planning/` (such as sprint backlog entries) and archive agent transcripts in `.code/agents/` with summaries in `docs/notes/agents/agent-briefs.md`.
+- For PRs, include validation notes, link backlog items, and call out any temporary CI skips or follow-up tickets.
+
 ### Dependency Management
 - Use **uv** for all Python package operations (`uv pip install ...`, `uv pip sync ...`).
 - Do **not** call `pip`/`python -m pip` directly—this repo standardizes on uv for reproducible environments.

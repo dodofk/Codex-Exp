@@ -10,12 +10,12 @@
 |------|-------|-------|--------------|--------|--------------------|
 | Implement Phi-2 LoRA text tower | Phase 4 | Model Engineer | 8 | In Review | `phi2_lora` tower implemented with registry entry; tests skip if torch unavailable |
 | Integrate Distil-Whisper audio tower | Phase 4 | Model Engineer | 8 | In Review | `distil_whisper` tower implemented (`src/model/towers/whisper.py`); tests skip when torch unavailable |
-| Replace dummy loss with InfoNCE + spreadout regularizer | Phase 4 | Lead Architect & Model Engineer | 5 | Not Started | Loss module computes contrastive objective and logs metrics |
-| Dataset loader + batching pipeline | Phase 4 | Model Engineer | 4 | Not Started | Loader pulls from `data/processed/<dataset>` with configurable shards |
-| CLI training enhancements (`model-train`) | Phase 4 | MLOps Engineer | 3 | Not Started | CLI supports dataset selection, logging to JSONL, and resume options |
-| Update Makefile + pyproject extras (`model-cpu`) | Phase 4 | MLOps Engineer | 2 | Not Started | Dependencies merged, new targets documented in README |
-| Evaluation metrics (MRR, BLEU) & reporting | Phase 4 | QA Lead | 3 | Not Started | `scripts/model_eval.py` computes MRR/BLEU and CLI eval emits MetricReport |
-| Compliance checkpoint for model artifacts | Phase 4 | Compliance Steward | 2 | Not Started | Policy note added covering LoRA/quantized checkpoints
+| Replace dummy loss with InfoNCE + spreadout regularizer | Phase 4 | Lead Architect & Model Engineer | 5 | In Review | Loss module computes contrastive + spreadout penalties and logs metrics |
+| Dataset loader + batching pipeline | Phase 4 | Model Engineer | 4 | In Review | Loader pulls from `data/processed/<dataset>` with configurable shards |
+| CLI training enhancements (`model-train`) | Phase 4 | MLOps Engineer | 3 | In Review | CLI supports dataset selection, logging to JSONL, and resume options |
+| Update Makefile + pyproject extras (`model-cpu`) | Phase 4 | MLOps Engineer | 2 | In Review | Dependencies merged, new targets documented in README |
+| Evaluation metrics (MRR, BLEU) & reporting | Phase 4 | QA Lead | 3 | In Review | `scripts/model_eval.py` computes MRR/BLEU and CLI eval emits MetricReport |
+| Compliance checkpoint for model artifacts | Phase 4 | Compliance Steward | 2 | In Review | Policy note added covering LoRA/quantized checkpoints |
 
 ## Supporting Tasks
 - Benchmark Phi-2 vs. Mistral-q4 CPU throughput (report in phase-4-log).

@@ -17,6 +17,11 @@ layers for the approved dataset shortlist (FLEURS, CoVoST 2, MuST-C, VoxPopuli).
    uv run make data-plan DATASET=fleurs
    ```
    Use `uv run --with <package>` for one-off extras when experimenting.
+3. For Phase 4 model experiments install the optional CPU extras:
+   ```bash
+   uv sync --extra model-cpu
+   ```
+   This pulls Torch CPU wheels, transformers/PEFT, and SacreBLEU for evaluation.
 
 ## Quickstart
 
@@ -111,8 +116,11 @@ PYTHONPATH=src python -m ingestion.hf_loader \
   `data/raw/<dataset>/logs/events.jsonl` and `telemetry.jsonl`.
 - Set `OTEL_EXPORTER_CONSOLE=1` to mirror telemetry to stdout for scraping or
   OpenTelemetry testing.
-- Summarize activity with `python scripts/telemetry_aggregate.py data/raw/<dataset>/logs`
+- Summarize ingestion activity with `python scripts/telemetry_aggregate.py data/raw/<dataset>/logs`
   to view counts plus total bytes and durations per event type.
+- Summarize model runs with `make telemetry-model-summary`, which scans
+  `data/logs/model/` and writes `data/telemetry/model_summary.json` (aggregated
+  recall/MRR/BLEU metrics).
 
 ### Operations
 - Daily and incident procedures live in `docs/notes/phases/operations-runbook.md`.
@@ -151,6 +159,32 @@ Quick reference for wording lives in the dataset manifest (`docs/notes/datasets/
 See `docs/notes/compliance/compliance-readiness-report.md` for the full legal
 summary and mitigation steps.
 
+## Model Training (Phase 4 Preview)
+
+The Phase 4 retrieval scaffold lives under `src/model/` and can be exercised on
+macOS/CPU. After installing the `model-cpu` extras:
+
+```bash
+uv sync --extra model-cpu
+```
+
+You can launch a smoke training run with:
+
+```bash
+make model-train MODEL_CONFIG=config/model/baseline.yaml
+```
+
+and run evaluation-only passes with:
+
+```bash
+make model-eval MODEL_CONFIG=config/model/baseline.yaml
+```
+
+Both targets stream metrics to `data/logs/model/<run-id>/metrics.jsonl` and
+mirror summary events into `data/logs/model/<run-id>/telemetry.jsonl`. Override
+CLI options via `MODEL_ARGS="--dataset-root data/processed/fleurs/smoke"` to
+experiment with alternate manifests or logging directories.
+
 ## Testing
 Run the automated tests with:
 ```bash
@@ -165,6 +199,8 @@ pipeline planning.
 - `src/ingestion/` — Config loader, download tasks, CLI entry point.
 - `src/preprocess/` — Config + pipeline scaffolding for Phase 3.
 - `docs/notes/` — Project documentation (roadmap, compliance, playbooks).
+- `scripts/model_telemetry_summary.py` — Aggregates `data/logs/model/` runs into
+  `data/telemetry/model_summary.json`.
 
 ## Next Steps
 - Populate ingestion configs with full artifact manifests and credentials.
